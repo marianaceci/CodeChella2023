@@ -3,8 +3,8 @@ import LineUp from './LineUp';
 import styles from './Home.module.scss';
 import Banner from '../../components/Banner';
 import bannerDesktop from '/home-banner-desktop.png';
-import bannerMobile from '/home-banner-mobile.png';
 import bannerTablet from '/home-banner-tablet.png';
+import bannerMobile from '/home-banner-mobile.png';
 
 export default function Home() {
   return (

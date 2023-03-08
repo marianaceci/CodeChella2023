@@ -1,21 +1,28 @@
-.exp {
-  .banner{
-    background-image: url('/experiencia-banner.png');
-    height: 405px;
-    background-size: cover;
-    background-repeat: no-repeat;  
-  }
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
 
+.exp {
   &__card{
-    padding: 4rem 7.5rem;
+    padding: 4rem 7.5rem 0 7.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 4rem;
+    @media (max-width: $desktop){
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      gap: 1rem;
+    }
 
     &:nth-child(3){
       flex-direction: row-reverse;
       text-align: right;
+      @media (max-width: $desktop){
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
     }
 
     &__texto{
