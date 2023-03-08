@@ -1,0 +1,20 @@
+[
+  {
+    "foto": "/setores01.png",
+    "alt": "Pista",
+    "titulo": "Pista",
+    "paragrafo": "Pista convencional, atendida pelos bares e banheiros das laterais do estádio. Espaço amplo, com local para sentar e descansar. Separada da pista premium por uma grade."
+  },
+  {
+    "foto": "/setores02.png",
+    "alt": "Pista Premium",
+    "titulo": "Pista Premium",
+    "paragrafo": "Pista mais próxima do palco, com acesso muito próximo a banheiros e bares num raio de 100m. Todas as pessoas idosas e/ou com deficiência têm direito a acesso gratuito a essa área."
+  },
+  {
+    "foto": "/setores03.png",
+    "alt": "Cadeiras",
+    "titulo": "Cadeiras",
+    "paragrafo": "Opção de cadeiras térreas ou elevadas. Acesso próximo a banheiros e bares, visão um pouco elevada em relação às pistas."
+  }
+]

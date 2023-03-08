@@ -1,0 +1,81 @@
+.mapa{
+  color: #444444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  &__legenda{
+    margin-left: 3rem;
+    h6{      
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+    }
+    ul {
+      margin-top: 1.5rem;
+      li{      
+        display: flex;
+        justify-self: center;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 40px;
+        &::before{
+          margin-right: 1rem;
+        }        
+        &:first-child::before{
+          content: url('./legenda/pistapremium.png');
+        }
+        &:nth-child(2)::before{
+          content: url('./legenda/pistacomum.png');
+        }
+        &:nth-child(3)::before{
+          content: url('./legenda/cadeiraterreo.png');
+        }
+        &:nth-child(4)::before{
+          content: url('./legenda/cadeirasuperior.png');
+        }
+        &:last-child::before{
+          content: url('./legenda/rampas.png');
+        }
+      }
+    }
+    
+    
+  }
+}
+
+.detalhes{
+  color: #444444;
+  h5{
+    text-align: center;
+    margin: 2rem auto;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  &__cards{
+    display: flex;   
+    text-align: center; 
+    padding: 0 7.5rem 3rem 7.5rem;
+    gap: 1.5rem;
+  }
+
+  &__card{
+    &:nth-child(2){
+      margin-top: 6.5rem;
+    }
+    h6{        
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      padding: 1.5rem 0;
+    }
+    p{        
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+}

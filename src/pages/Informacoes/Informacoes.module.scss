@@ -1,0 +1,34 @@
+.informacoes{
+  color: #444444;
+  h3{
+    font-family: 'Calistoga';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .faq__cards{
+    padding: 0 13rem 3rem 13rem;
+    
+  }
+  .faq__card{
+    margin-bottom: 1.5rem;
+    h6{
+      color: #FFFFFF;      
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      padding: 1rem;
+      background: #2E7BA2;
+    }
+    p{      
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+      background: #C8DEEF;
+      padding: 1rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+
+.footer{
+  padding: 5rem $padding-horizontal;
+  background-color: $amarelo;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  line-height: 40px;
+  font-size: 1.25rem;
+
+  @media (min-width: $tablet) and (max-width: $desktop){
+    flex-direction: column;    
+    padding: 1.5rem 0;
+  }
+
+  @media (max-width: $tablet){
+    flex-direction: column; 
+    padding: 1.5rem;    
+  }
+
+  &__imgs {    
+    @media (min-width: $tablet) and (max-width: $desktop){
+      text-align: center;
+    }
+
+    &__redes{
+      display: flex;
+      align-items: center;
+      @media (max-width: $tablet){
+        flex-direction: column;  
+      }
+      ul{
+        display: flex;
+        align-items: center;
+        img{
+          margin-left: 0.75rem;
+        }      
+      } 
+    }
+  }
+
+  &__autor{
+    @media (min-width: $tablet) and (max-width: $desktop){
+      display: flex;
+      margin-top: 2rem;
+      gap: 5px;
+    }
+    @media (max-width: $tablet){
+      text-align: center;   
+      margin-top: 2rem;
+    }
+  }
+}

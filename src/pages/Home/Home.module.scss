@@ -1,0 +1,48 @@
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+
+.container {
+   .sobre {
+    display: flex;
+    padding: 64px $padding-horizontal;
+    gap: 48px; 
+
+    &__descricao{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20.5px 0;
+      text-align: center;
+      align-items: center;
+
+      &__titulo{
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.375rem;
+      }
+
+      &__texto{      
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+        padding: 24px 0;
+      }
+    }
+  }
+
+  .lineup {
+    h2 {
+      font-family: 'Calistoga', cursive;
+      font-size: 4rem;
+      line-height: 5.25rem;
+      text-align: center;
+      padding: 2rem 0;
+    }    
+  }
+
+  .imagem_home{
+    width: 100%;
+  }
+  
+}
+ 

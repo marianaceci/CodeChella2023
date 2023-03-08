@@ -1,0 +1,37 @@
+.exp {
+  .banner{
+    background-image: url('/experiencia-banner.png');
+    height: 405px;
+    background-size: cover;
+    background-repeat: no-repeat;  
+  }
+
+  &__card{
+    padding: 4rem 7.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+
+    &:nth-child(3){
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    &__texto{
+      h6{
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 38px;
+      }
+
+      p{
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 40px;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+

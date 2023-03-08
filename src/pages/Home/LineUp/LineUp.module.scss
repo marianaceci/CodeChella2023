@@ -1,0 +1,70 @@
+@import '/src/styles/variables';
+
+.lineup{ 
+  display: flex;
+  flex-direction: column;
+  
+  &__data {
+    display: flex;
+    align-items: center;
+    padding: 0 $padding-horizontal;
+
+    hr {
+      border-color: $mostarda;
+      margin: 0;
+      width: 13vw;
+    }
+
+    h3 {
+      background-color: $mostarda;  
+      color: $branco;
+      font-family: 'Calistoga', cursive;
+      font-size: 3rem;
+      padding: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0 auto;
+    }   
+  }
+
+  &__bandas {
+    margin: 3rem auto;
+    color: $cinza;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;    
+
+    &__linha{
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      gap: 2rem;
+    }
+    
+    h2{
+      font-weight: 800;
+      font-size: 3rem;
+      line-height: 3.625rem;
+    }
+    
+    h5{      
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    
+    h6{      
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.375rem;
+    }
+    
+    h4{      
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 2.375rem;
+    }
+  }
+
+  
+}
