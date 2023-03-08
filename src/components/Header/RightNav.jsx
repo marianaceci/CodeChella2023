@@ -6,6 +6,18 @@ const Ul = styled.ul`
   display: flex;
   align-items: center; 
   flex-flow: row nowrap;   
+  justify-content: space-between;
+  width: 60%;
+
+  li {    
+    * {
+      text-decoration: none;
+      color: ${theme.colors.branco};
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
 
   @media (max-width: ${theme.breakpoints.tablet}){
     transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -27,18 +39,14 @@ const Ul = styled.ul`
       &:last-child{
         border-bottom: none;
       }
-      * {
-        text-decoration: none;
-        color: ${theme.colors.branco};
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 40px;
-      }
+      
     } 
   }
 
   @media (max-width: ${theme.breakpoints.desktop}){
-    
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 
 `

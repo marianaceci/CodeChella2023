@@ -10,6 +10,13 @@
   justify-content: space-between;
   padding: 2rem 7.5rem;
   @media (max-width: $tablet){
-    padding: 2rem 1.5rem;
+    padding: 2rem 3rem;
+    flex-direction: row;
+  }
+  
+  @media (min-width: $tablet) and (max-width: $desktop){
+    flex-direction: column;
+    height: fit-content;    
+    padding: 2rem 5rem;
   }
 }
