@@ -4,9 +4,8 @@ export default function Banner({srcsetTablet, srcsetMobile, src, alt}) {
   return (
     <header className={styles.banner}>
       <picture>
-        {/* <source srcset={srcsetDesktop} media="(min-width: 1400px)" /> */}
-        <source srcSet={srcsetTablet} media="(min-width: 768px)" />
-        <source srcSet={srcsetMobile} media="(min-width: 320px)" />
+        <source srcSet={srcsetTablet} media= "(min-width: 768px) and (max-width: 1024px)"  />
+        <source srcSet={srcsetMobile} media="(max-width: 768px)" />
         <img src={src} alt={alt} />
       </picture>
     </header>

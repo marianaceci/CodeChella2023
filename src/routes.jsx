@@ -9,7 +9,6 @@ import Informacoes from "./pages/Informacoes";
 
 export default function AppRouter() {
   return (
-    <main>
       <Router>
         <Header />
         <Routes>
@@ -23,6 +22,5 @@ export default function AppRouter() {
         </Routes>
         <Footer />
       </Router>
-    </main>
   );
 }

@@ -1,6 +1,4 @@
-.banner{
-  background-image: url('src/assets/home/banner.png');
-  height: 405px;
-  background-size: cover;
-  background-repeat: no-repeat;  
+.banner picture *{
+  height: 405px; 
+  width: 100%;
 }
