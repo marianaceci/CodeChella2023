@@ -34,7 +34,11 @@ export default function Home() {
         </section>
         
         <LineUp />
-        <img className={styles.imagem_home} src='../../../image-home.png' alt='pessoas dançando em festival' />
+        <picture>
+          <source srcSet='/Home/bottom_s.png' media="(max-width: 768px)" />
+          <source srcSet='/Home/bottom_m.png' media="(min-width: 768px) and (max-width: 1024px)" />
+          <img className={styles.imagem_home} src='/Home/bottom_g.png' alt='pessoas dançando em festival' />
+        </picture>
       </div>
         
       
