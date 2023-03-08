@@ -2,9 +2,9 @@ import BuyTicketButton from '../../components/BuyTicketButton';
 import LineUp from './LineUp';
 import styles from './Home.module.scss';
 import Banner from '../../components/Banner';
-import bannerDesktop from '/home-banner-desktop.png';
-import bannerTablet from '/home-banner-tablet.png';
-import bannerMobile from '/home-banner-mobile.png';
+import bannerDesktop from '/Home/home-banner_g.png';
+import bannerTablet from '/Home/home-banner_m.png';
+import bannerMobile from '/Home/home-banner_s.png';
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
         alt="foto do brinquedo chapéu mexicano"
         srcsetTablet={bannerTablet}
         srcsetMobile={bannerMobile}
+        titulo="Boas-vindas ao #CodeChella2023!"
       />
 
       <div className={styles.container}>

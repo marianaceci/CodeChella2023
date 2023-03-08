@@ -13,6 +13,7 @@ export default function Experiencia() {
         alt="Pessoas dançando"
         srcsetTablet={bannerTablet}
         srcsetMobile={bannerMobile}
+        titulo="A Experiência"
       />
 
       {experiencias.map((experiencia) => (

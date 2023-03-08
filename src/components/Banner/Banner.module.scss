@@ -1,4 +1,23 @@
-.banner picture *{
-  height: 405px; 
-  width: 100%;
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+
+.banner {
+  position: relative;
+  h1{
+    color: $cinza;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+    top: 40%;
+    right: 0;    
+    font-family: 'Calistoga';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 83px;
+  }
+  picture *{
+    height: 405px; 
+    width: 100%;
+  }
 }
