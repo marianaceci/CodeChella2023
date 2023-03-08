@@ -1,12 +1,20 @@
 import Banner from '../../components/Banner';
 import styles from './Setores.module.scss';
-import banner from '/setores-banner.png';
 import detalhes from './detalhes.json';
+import bannerDesktop from '/Setores/setores-banner_g.png';
+import bannerTablet from '/Setores/setores-banner_m.png';
+import bannerMobile from '/Setores/setores-banner_s.png';
+
 
 export default function Setores(){
   return (
     <section>      
-      <Banner src={banner} alt="céu azul" />
+      <Banner
+        src={bannerDesktop}
+        alt="céu azul"
+        srcsetTablet={bannerTablet}
+        srcsetMobile={bannerMobile}
+      />
 
       <div className={styles.mapa}>
         <img src="/mapa-setores.png" alt="mapa de setores" />

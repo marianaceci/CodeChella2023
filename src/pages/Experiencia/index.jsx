@@ -1,9 +1,9 @@
 import Banner from "../../components/Banner";
 import styles from "./Experiencia.module.scss";
 import experiencias from "./experiencias.json";
-import bannerDesktop from '../../../public/Experiencia/experiencia-banner_g.png';
-import bannerTablet from '../../../public/Experiencia/experiencia-banner_m.png';
-import bannerMobile from '../../../public/Experiencia/experiencia-banner_s.png';
+import bannerDesktop from '/Experiencia/experiencia-banner_g.png';
+import bannerTablet from '/Experiencia/experiencia-banner_m.png';
+import bannerMobile from '/Experiencia/experiencia-banner_s.png';
 
 export default function Experiencia() {
   return (
