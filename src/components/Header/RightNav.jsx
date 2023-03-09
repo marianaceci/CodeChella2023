@@ -16,6 +16,9 @@ const Ul = styled.ul`
       font-weight: 700;
       font-size: 20px;
       line-height: 40px;
+      &:hover{
+        border-bottom: 1px solid ${theme.colors.branco};
+      }
     }
   }
 
