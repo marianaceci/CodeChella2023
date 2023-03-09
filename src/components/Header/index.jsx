@@ -6,7 +6,7 @@ import logo from './logo.svg';
 export default function Header() {  
   return (
     <nav className={styles.menu}>
-      <Link to="/">
+      <Link to="/" className={styles.menu__logo}>
         <img src={logo} alt='logo do CodeChella' />
       </Link>
       <Burger />

@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem 7.5rem;
+  &__logo:hover{
+    transform: scale(1.2);
+    transition: all .5s ease-in-out ;
+  }
   @media (max-width: $tablet){
     padding: 2rem 3rem;
     flex-direction: row;
