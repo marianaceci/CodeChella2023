@@ -29,7 +29,7 @@
   .select{
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 2rem;
     input{
       width: 20vw;
     }
@@ -46,16 +46,5 @@
         width: 98%;
       }
     }
-  }
-}
-
-.dropdown{
-  background: $branco;
-  border: none;
-  outline: none;
-  border-radius: 0;
-  width: 20vw;
-  @media (max-width: $desktop){
-    width: 100%;
   }
 }

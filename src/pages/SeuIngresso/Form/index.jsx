@@ -1,8 +1,8 @@
 import ButtonSubmit from '../../../components/ButtonSubmit';
-import TipoDeIngresso from './dropdown';
+import TipoDeIngresso from './Dropdown';
 import styles from './Form.module.scss';
 
-const Form = () => {
+const Form = () => {  
 
   return (
     <form className={styles.formulario}>
@@ -16,7 +16,6 @@ const Form = () => {
       </div>
       <div className={styles.select}>
         <div className={styles.formulario__campo}>
-          <label htmlFor="tipo">Tipo de ingresso</label>
           <TipoDeIngresso />
         </div>
         <div className={styles.formulario__campo}>
