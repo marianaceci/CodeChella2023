@@ -13,6 +13,7 @@ export const theme = {
     "coral" : "#FBF0DD",
     "branco": "rgba(255, 255, 255, 1)",
     "cinza": "rgba(68, 68, 68, 1)",
+    "hover": "rgba(81, 158, 197, 1)"
   },
   typography: {
     fontFamily: {

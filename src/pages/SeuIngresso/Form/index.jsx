@@ -14,9 +14,9 @@ const Form = ({ onSubmit }) => {
   }
 
   const tiposDeIngresso = [
-    {label: 'Ingresso 1', value:'ingresso1'},
-    {label: 'Ingresso 2', value:'ingresso2'},
-    {label: 'Ingresso 3', value:'ingresso3'},
+    {label: 'Ingresso Cortesia', value:'ingressoCortesia'},
+    {label: 'Ingresso Inteiro', value:'ingressoInteiro'},
+    {label: 'Ingresso meia-entrada', value:'ingressoMeia'},
   ]
 
   const [ingresso, setIngresso] = useState('Tipo de ingresso')

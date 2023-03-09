@@ -2,6 +2,7 @@
 
 .buyTicket{
   background-color: $azul-escuro;
+  border: 1px solid $azul-escuro;
   padding: 0.5rem 1rem;
   color: $branco;
   box-shadow: 4px 4px 0px $azul-escuro-sombra;
@@ -15,6 +16,10 @@
   margin: 0 auto;
   img{
     margin-left: 1rem;
+  }
+  &:hover{
+    background-color: $hover;
+    cursor: pointer;
   }
 
 }
