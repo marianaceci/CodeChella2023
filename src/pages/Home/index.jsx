@@ -26,7 +26,7 @@ export default function Home() {
           <div className={styles.sobre__descricao}>
             <h3 className={styles.sobre__descricao__titulo}>&lt; 11 e 12 de Março &gt;<br/>Aluródromo de São Paulo</h3>
             <p className={styles.sobre__descricao__texto}>Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!</p>
-            <BuyTicketButton />
+            <BuyTicketButton texto="Comprar Ingresso" />
           </div>          
         </section>
 

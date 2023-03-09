@@ -1,9 +1,9 @@
 import styles from './Footer.module.scss';
-import logo from '../../assets/footer/logo-footer.svg';
-import icone1 from '../../assets/footer/icone1.svg';
-import icone2 from '../../assets/footer/icone2.svg';
-import icone3 from '../../assets/footer/icone3.svg';
-import icone4 from '../../assets/footer/icone4.svg';
+import logo from './icons/logo-footer.svg';
+import icone1 from './icons/icone1.svg';
+import icone2 from './icons/icone2.svg';
+import icone3 from './icons/icone3.svg';
+import icone4 from './icons/icone4.svg';
 
 export default function Footer() {
   return (
