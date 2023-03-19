@@ -1,9 +1,13 @@
 import Banner from '../../components/Banner';
 import styles from './Informacoes.module.scss';
-import faq from './faq.json';
+import faqs from './faq.json';
 import bannerDesktop from '/Informacoes/info-banner_g.png';
 import bannerTablet from '/Informacoes/info-banner_m.png';
 import bannerMobile from '/Informacoes/info-banner_s.png';
+import arrow from './arrow_drop_down.png';
+
+import { Accordion, AccordionItem } from '@szhsin/react-accordion';
+
 
 export default function Informacoes(){
   return (
@@ -15,15 +19,23 @@ export default function Informacoes(){
         srcsetMobile={bannerMobile}
         titulo="Informações Gerais"
       />
-      <h3>Perguntas Frequentes:</h3>
-      <div className={styles.faq__cards}>
-        {faq.map(faq => (
-          <div className={styles.faq__card}>
-            <h6>{faq.pergunta}</h6>
+      <h3 className={styles.titulo__pagina}>Perguntas Frequentes:</h3>
+
+      <Accordion className={styles.faq__cards}>
+        {faqs.map((faq, index) => (
+          <AccordionItem
+            key={index}
+            header={
+              <>
+                <h6 className={styles.faq__card}>{faq.pergunta}</h6>
+                <img src={arrow} alt="arrow down" />
+              </>
+            }
+          >
             <p>{faq.resposta}</p>
-          </div>
+          </AccordionItem>
         ))}
-      </div> 
+      </Accordion> 
     
     </section>
   )

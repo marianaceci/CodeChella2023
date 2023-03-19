@@ -1,6 +1,9 @@
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+
 .informacoes{
   color: #444444;
-  h3{
+  .titulo__pagina{
     font-family: 'Calistoga';
     font-weight: 400;
     font-size: 48px;
@@ -11,24 +14,29 @@
 
   .faq__cards{
     padding: 0 13rem 3rem 13rem;
-    
-  }
-  .faq__card{
-    margin-bottom: 1.5rem;
-    h6{
-      color: #FFFFFF;      
+    button{
+      border: none;
+      background-color: $azul-escuro;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $branco;
       font-weight: 700;
-      font-size: 32px;
+      font-size: 1.5rem;
       line-height: 38px;
       padding: 1rem;
-      background: #2E7BA2;
+      width: 100%;
+      margin-top: 0.5rem;
     }
+    
     p{      
       font-weight: 500;
       font-size: 20px;
       line-height: 40px;
       background: #C8DEEF;
       padding: 1rem;
+      margin-bottom: 1.5rem;
     }
-  }
+    
+  }  
 }

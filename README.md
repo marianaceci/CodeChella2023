@@ -20,4 +20,4 @@ Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, pró
 React + Vite
 styled components + SASS
 npm i react-router-dom
-material ui
+https://github.com/szhsin/react-accordion
