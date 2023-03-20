@@ -7,13 +7,15 @@
   color: $branco;
   box-shadow: 4px 4px 0px $azul-escuro-sombra;
   border-radius: 1rem;
-  width: 256px;
+  width: 150px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 40px;
   margin: 0 auto;
+  text-decoration: none;
   img{
     margin-left: 1rem;
   }

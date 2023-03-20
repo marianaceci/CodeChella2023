@@ -5,7 +5,7 @@ import bannerDesktop from '/Ingresso/ingresso-banner_g.png';
 import bannerTablet from '/Ingresso/ingresso-banner_m.png';
 import bannerMobile from '/Ingresso/ingresso-banner_s.png';
 
-export default function SeuIngresso(){
+export default function IngressoForm(){
   return (
     <section className={styles.ingresso}>        
       <Banner

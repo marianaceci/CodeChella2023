@@ -37,6 +37,11 @@
       padding: 1rem;
       margin-bottom: 1.5rem;
     }
-    
+    @media (max-width: $desktop){
+      padding: 0 3.75rem 3rem 3.75rem;
+    }
+    @media (max-width: $tablet){
+      padding: 0 1.5rem 3rem 1.5rem;
+    }
   }  
 }

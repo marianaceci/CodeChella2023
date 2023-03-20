@@ -6,7 +6,8 @@ import PaginaPadrao from "./components/PaginaPadrao";
 import Footer from "./components/Footer";
 import Setores from "./pages/Setores";
 import Informacoes from "./pages/Informacoes";
-import SeuIngresso from "./pages/SeuIngresso";
+import IngressoForm from "./pages/IngressoForm";
+import QRIngresso from "./pages/QRIngresso";
 
 export default function AppRouter() {
   return (
@@ -18,7 +19,8 @@ export default function AppRouter() {
             <Route path="experiencia" element={<Experiencia />} />
             <Route path="setores" element={<Setores />} />
             <Route path="informacoes" element={<Informacoes />} />
-            <Route path="ingresso" element={<SeuIngresso />} />
+            <Route path="ingresso" element={<IngressoForm />} />
+            <Route path="ingresso/qrcode" element={<QRIngresso />} />
           </Route>
         </Routes>
         <Footer />

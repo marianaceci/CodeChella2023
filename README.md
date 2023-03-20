@@ -17,7 +17,27 @@ Rápida descrição do objetivo de fazer esse projeto
 Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
 
 
+*************************************************
+validar:
+C:\Users\macs\OneDrive\Área de Trabalho\DEV\Alura\Front-end\js-validando-formularios
+
+C:\Users\macs\OneDrive\Área de Trabalho\DEV\Alura\Front-end\js-03-web-mochila-viagem
+*************************************************
+
+
+
+
+
+
+
+
+
+
 React + Vite
 styled components + SASS
 npm i react-router-dom
+
+
 https://github.com/szhsin/react-accordion
+An unstyled, accessible accordion library for React apps and design systems
+npm install @szhsin/react-accordion
