@@ -3,6 +3,14 @@
 
 .qr{
   padding: 2rem 20rem;
+
+  @media (max-width: $desktop){
+    padding: 4rem 3.75rem;
+  }
+  @media (max-width: $tablet){
+    padding: 4rem 1.5rem;
+  }
+
   &__titulo{
     font-weight: 700;
     font-size: 32px;
@@ -14,10 +22,9 @@
   }
 
   &__card{
-    width: 100%;
     padding: 2rem;
     background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);    
     
     &__logos{
       display: flex;
@@ -31,6 +38,10 @@
       display: flex;
       align-items: center;
       gap: 3rem;
+      @media (max-width: $tablet){
+        flex-direction: column;
+        text-align: center;
+      }
       
       &__text{
         color: $cinza;
