@@ -29,75 +29,89 @@ const Form = () => {
   };
 
 
-//ONBLUR:  
-  const [mensagemErroNome, setMensagemErroNome] = useState('');
-  const handleBlurNome = () => {
-    if (nome.length < 3) {
-      setMensagemErroNome('muito curto')
-    } else {
-      setMensagemErroNome('')
-    }
-  };
+//ONSUBMIT:  
+  const [error, setError] = useState(false);
+
   
-  const [mensagemErroEmail, setMensagemErroEmail] = useState('');
-  const handleBlurEmail = (event) => {
+  const validaEmail = (event) => {
     const value = event.target.value.trim().toLowerCase();
     const isValidEmail = emailRegex.test(value);
-    if (!isValidEmail) {
-      setMensagemErroEmail('Digite um e-mail válido')
-    } else {
-      setMensagemErroEmail('')
-    }
+    return isValidEmail //true
   };
   
-  const [mensagemErroIdade, setMensagemErroIdade] = useState('');
-  const handleBlurNascimento = () => {
+  const validaIdade = () => {
     const data = new Date(nascimento);
     const dataAtual = new Date();
     const dataMais18 = new Date(data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate());
-    if (dataAtual <= dataMais18) {
-      setMensagemErroIdade('O usuário não é maior de idade')
-    } else {
-      setMensagemErroIdade('')
-    }
+    return dataAtual >= dataMais18    
   };
 
-  const handleClick = (e) => {
-    if (mensagemErroNome == '' && mensagemErroEmail == '' && mensagemErroIdade == '') {
-      e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (nome.length <= 1 || email.length == 0 || nascimento.length == 0) {
+      setError(true)
+    } else {
+      setError(false)
     }
   }
 
   return (
-    <form className={styles.formulario}>
+    <form className={styles.formulario} onSubmit={handleSubmit}>
       <div className={styles.formulario__campo}>
         <label htmlFor="nome">Nome Completo:</label>
         <input
-          minLength="3"
           required
           type="text"
           value={nome}
           onChange={onChangeNome}
-          onBlur={handleBlurNome}
+          onInvalid={e => e.preventDefault()}
         />
-        <span className={styles.mensagem_erro}>{mensagemErroNome}</span>
+        {
+          error && nome.length <= 1 ?
+            <span className={styles.mensagem_erro}>
+              Nome deve ter mais do que um caracter
+            </span> : ""
+        }
       </div>
       <div className={styles.formulario__campo}>
         <label htmlFor="email">Email:</label>
-        <input type="email" value={email} onChange={onChangeEmail} onBlur={handleBlurEmail}/>
-        <span className={styles.mensagem_erro}>{mensagemErroEmail}</span>
+        <input
+          required
+          type="email"
+          value={email}
+          inputMode="email"
+          onChange={onChangeEmail}
+          onInvalid={e => e.preventDefault()}
+        />
+        {
+          error && !validaEmail ?
+            <span className={styles.mensagem_erro}>
+              Digite um e-mail vádilo
+            </span> : ""
+        }
       </div>
       <div className={styles.select}>
         <div className={styles.formulario__campo}>
-          <TipoDeIngresso />
+          <TipoDeIngresso required />
         </div>
         <div className={styles.formulario__campo}>
           <label htmlFor="nascimento">Data de nascimento:</label>
-          <input type="date" value={nascimento} onChange={onChangeNascimento} onBlur={handleBlurNascimento} />
-          <span className={styles.mensagem_erro}>{mensagemErroIdade}</span>
+          <input
+            required
+            type="date"
+            value={nascimento}
+            onChange={onChangeNascimento}
+            onInvalid={e => e.preventDefault()}
+          />
+          {
+            error && nascimento.length == 0 ?
+              <span className={styles.mensagem_erro}>
+                O usuário deve ser maior de idade
+              </span> : ""
+          }
         </div>
       </div>
-      <ButtonSubmit handleClick={handleClick}/>
+      <button>Avançar!</button>
     </form>
   )
 }
