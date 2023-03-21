@@ -1,7 +1,6 @@
-import ButtonSubmit from '../../../components/ButtonSubmit';
-import TipoDeIngresso from './Dropdown';
 import styles from './Form.module.scss';
 import { useState } from 'react';
+import { redirect } from 'react-router-dom';
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -12,6 +11,7 @@ const Form = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [nascimento, setNascimento] = useState('');
+  const [tipo, setTipo] = useState('');
 
   const onChangeNome = event => {
     localStorage.setItem("nome", event.target.value);
@@ -23,35 +23,68 @@ const Form = () => {
     setEmail(event.target.value);
   };
 
+  const onChangeTipo = event => {
+    localStorage.setItem('tipo', event.target.value);
+    setTipo(event.target.value);
+  }
+
   const onChangeNascimento = event => {
     localStorage.setItem('nascimento', event.target.value);
     setNascimento(event.target.value);
   };
 
+  const tiposDeIngresso = [
+    {label: 'Ingresso Cortesia', value:'ingressoCortesia'},
+    {label: 'Ingresso Inteiro', value:'ingressoInteiro'},
+    {label: 'Ingresso meia-entrada', value:'ingressoMeia'},
+  ]
 
 //ONSUBMIT:  
-  const [error, setError] = useState(false);
+  const [errorNome, setErrorNome] = useState(false);
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [errorNascimento, setErrorNascimento] = useState(false);
+  const [errorTipo, setErrorTipo] = useState(false);
 
-  
-  const validaEmail = (event) => {
-    const value = event.target.value.trim().toLowerCase();
-    const isValidEmail = emailRegex.test(value);
-    return isValidEmail //true
-  };
-  
-  const validaIdade = () => {
-    const data = new Date(nascimento);
-    const dataAtual = new Date();
-    const dataMais18 = new Date(data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate());
-    return dataAtual >= dataMais18    
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (nome.length <= 1 || email.length == 0 || nascimento.length == 0) {
-      setError(true)
+    if (errorNome && errorEmail && errorNascimento && errorTipo) {
+      redirect('ingresso/qrcode');      
+    }
+  }
+
+  const handleBlurNome = () => {
+    if (nome.length <= 1) {
+      setErrorNome(true)
     } else {
-      setError(false)
+      setErrorNome(false)
+    }
+  }
+
+  const handleBlurEmail = (e) => {  
+    if(!emailRegex.test(e.target.value.trim().toLowerCase()) || email == '') {
+      setErrorEmail(true)
+    } else {
+      setErrorEmail(false)
+    }
+  }
+
+  const handleBlurTipo = () => {
+    if (tipo == '') {
+      setErrorTipo("Escolha um tipo de ingresso")
+    } else {
+      setErrorTipo("")
+    }
+  }
+  
+  const handleBlurNascimento = () => {
+    const data = new Date(nascimento);
+    const dataAtual = new Date();
+    const dataMais18 = new Date(data.getUTCFullYear() + 18, data.getUTCMonth(), data.getUTCDate());
+    if(dataAtual <= dataMais18){
+      setErrorNascimento(true)
+    } else {
+      setErrorNascimento(false)
     }
   }
 
@@ -62,56 +95,72 @@ const Form = () => {
         <input
           required
           type="text"
+          name="nome"
           value={nome}
+          onBlur={handleBlurNome}
           onChange={onChangeNome}
           onInvalid={e => e.preventDefault()}
         />
-        {
-          error && nome.length <= 1 ?
+        {errorNome && (
             <span className={styles.mensagem_erro}>
               Nome deve ter mais do que um caracter
-            </span> : ""
-        }
+            </span>)}
       </div>
+
       <div className={styles.formulario__campo}>
         <label htmlFor="email">Email:</label>
         <input
           required
           type="email"
+          name="email"
           value={email}
           inputMode="email"
+          onBlur={handleBlurEmail}
           onChange={onChangeEmail}
           onInvalid={e => e.preventDefault()}
         />
-        {
-          error && !validaEmail ?
+        {errorEmail && (
             <span className={styles.mensagem_erro}>
               Digite um e-mail vádilo
-            </span> : ""
-        }
+            </span>)}
       </div>
+
       <div className={styles.select}>
         <div className={styles.formulario__campo}>
-          <TipoDeIngresso required />
+          <div className={styles.dropdown}>
+            <label>Tipo de ingresso</label>
+            <select
+              required
+              className={styles.dropdown__select}
+              value={tipo}
+              onChange={onChangeTipo}
+              onBlur={handleBlurTipo}
+            >
+              <option />        
+              {tiposDeIngresso.map(tipo => <option key={tipo.value}>{tipo.label}</option>)}
+            </select>
+            <span className={styles.mensagem_erro}>{errorTipo}</span>
+          </div>
         </div>
+
         <div className={styles.formulario__campo}>
           <label htmlFor="nascimento">Data de nascimento:</label>
           <input
             required
             type="date"
+            name="nascimento"
             value={nascimento}
+            onBlur={handleBlurNascimento}
             onChange={onChangeNascimento}
             onInvalid={e => e.preventDefault()}
           />
-          {
-            error && nascimento.length == 0 ?
+          {errorNascimento && (
               <span className={styles.mensagem_erro}>
                 O usuário deve ser maior de idade
-              </span> : ""
-          }
+              </span>)}
         </div>
       </div>
-      <button>Avançar!</button>
+      <button type='submit'>Avançar!</button>
     </form>
   )
 }
