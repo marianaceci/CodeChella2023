@@ -20,7 +20,7 @@ export default function AppRouter() {
             <Route path="setores" element={<Setores />} />
             <Route path="informacoes" element={<Informacoes />} />
             <Route path="ingresso" element={<IngressoForm />} />
-            <Route path="ingresso/qrcode" element={<QRIngresso />} />
+            <Route path="qringresso" element={<QRIngresso />} />
           </Route>
         </Routes>
         <Footer />
