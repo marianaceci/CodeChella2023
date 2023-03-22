@@ -30,8 +30,8 @@ export default function Setores(){
       <div className={styles.detalhes}>
         <h5>Mais detalhes sobre os setores</h5>
         <div className={styles.detalhes__cards}>
-          {detalhes.map(detalhe => (
-            <div className={styles.detalhes__card}>
+          {detalhes.map((detalhe, index) => (
+            <div className={styles.detalhes__card} key={index}>
               <img src={detalhe.foto} alt={detalhe.alt} />
               <h6>{detalhe.titulo}</h6>
               <p>{detalhe.paragrafo}</p>
