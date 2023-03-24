@@ -1,8 +1,8 @@
 export const theme = {
   breakpoints: {
-    "mobile": "320px",
+    "mobile": "360px",
     "tablet": "768px",
-    "desktop": "1024px",
+    "desktop": "1440px",
   },
   colors: {
     "azul-escuro": "#2E7BA2",

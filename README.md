@@ -18,12 +18,16 @@ Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, pró
 
 
 *************************************************
-validar:
-C:\Users\macs\OneDrive\Área de Trabalho\DEV\Alura\Front-end\js-validando-formularios
-
-C:\Users\macs\OneDrive\Área de Trabalho\DEV\Alura\Front-end\js-03-web-mochila-viagem
+- mudar para @media(min-width)
+- arrumar LINEUP
+- ajustar .json do lineup
+- add trocar theme
+- add campos de dataEvento, e setor no ingressoForm
 *************************************************
 
+
+FAZER COM TYPESCRIPT
+FAZER COM DATABASE
 
 
 
@@ -36,7 +40,6 @@ C:\Users\macs\OneDrive\Área de Trabalho\DEV\Alura\Front-end\js-03-web-mochila-v
 React + Vite
 styled components + SASS
 npm i react-router-dom
-
 
 https://github.com/szhsin/react-accordion
 An unstyled, accessible accordion library for React apps and design systems

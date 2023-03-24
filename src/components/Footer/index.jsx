@@ -1,23 +1,20 @@
 import styles from './Footer.module.scss';
-import logo from './icons/logo-footer.svg';
-import icone1 from './icons/icone1.svg';
-import icone2 from './icons/icone2.svg';
-import icone3 from './icons/icone3.svg';
-import icone4 from './icons/icone4.svg';
+import logo from './logo-footer.svg';
+import { BsWhatsapp, BsTwitch, BsInstagram, BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       
-      <div className={styles.footer__imgs}>
+      <div className={styles.footer__redes}>
         <img src={logo} alt='logo do CodeChella' />
-        <div className={styles.footer__imgs__redes}>
+        <div className={styles.footer__redes__icons}>
           <span>Acesse nossas redes: </span>
           <ul>
-            <img src={icone1} alt='whatsapp' />
-            <img src={icone2} alt='twitch' />
-            <img src={icone3} alt='instagram' />
-            <img src={icone4} alt='twitter' />
+            <BsWhatsapp />
+            <BsTwitch />
+            <BsInstagram />
+            <BsTwitter />
           </ul>    
         </div>
       </div>

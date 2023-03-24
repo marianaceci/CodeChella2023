@@ -2,7 +2,6 @@
 @import 'src/styles/breakpoints';
 
 .footer{
-  padding: 5rem $padding-horizontal;
   background-color: $amarelo;
   display: flex;
   align-items: center;
@@ -10,32 +9,22 @@
   font-weight: 500;
   line-height: 40px;
   font-size: 1.25rem;
+  flex-direction: column; 
+  padding: 1.5rem;
 
-  @media (min-width: $tablet) and (max-width: $desktop){
-    flex-direction: column;    
-    padding: 1.5rem 0;
-  }
+  &__redes {   
 
-  @media (max-width: $tablet){
-    flex-direction: column; 
-    padding: 1.5rem;    
-  }
-
-  &__imgs {    
-    @media (min-width: $tablet) and (max-width: $desktop){
-      text-align: center;
-    }
-
-    &__redes{
+    &__icons{
       display: flex;
       align-items: center;
-      @media (max-width: $tablet){
-        flex-direction: column;  
+      flex-direction: column;  
+      svg{
+        color: $cinza;
       }
       ul{
         display: flex;
         align-items: center;
-        img{
+        *{
           margin-left: 0.75rem;
         }      
       } 
@@ -43,14 +32,72 @@
   }
 
   &__autor{
-    @media (min-width: $tablet) and (max-width: $desktop){
+      text-align: center;   
+      margin-top: 2rem;
+    
+  }
+}
+
+@media(min-width: $tablet){
+  .footer{
+    background-color: $amarelo;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    line-height: 40px;
+    font-size: 1.25rem;
+    flex-direction: column;    
+    padding: 1.5rem 0;
+  
+    &__redes {
+      text-align: center;
+      
+  
+      &__icons{
+        display: flex;
+        align-items: center;
+        ul{
+          display: flex;
+          align-items: center;
+          *{
+            margin-left: 0.75rem;
+          }      
+        } 
+      }
+    }
+  
+    &__autor{
       display: flex;
       margin-top: 2rem;
       gap: 5px;
     }
-    @media (max-width: $tablet){
-      text-align: center;   
-      margin-top: 2rem;
+  }
+}
+
+@media(min-width: $desktop){
+  .footer{
+    padding: 5rem $padding-horizontal;
+    background-color: $amarelo;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    line-height: 40px;
+    font-size: 1.25rem;
+  
+    &__redes {      
+      &__icons{
+        display: flex;
+        align-items: center;
+        ul{
+          display: flex;
+          align-items: center;
+          *{
+            margin-left: 0.75rem;
+          }      
+        } 
+      }
     }
   }
 }

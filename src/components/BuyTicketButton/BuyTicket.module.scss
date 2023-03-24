@@ -1,4 +1,5 @@
 @import 'src/styles/variables';
+@import 'src/styles/breakpoints';
 
 .buyTicket{
   background-color: $azul-escuro;
@@ -6,15 +7,22 @@
   color: $branco;
   box-shadow: 4px 4px 0px $azul-escuro-sombra;
   border-radius: 1rem;
-  width: 256px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 40px;
   &:hover{
     background-color: $hover;
     cursor: pointer;
+  }
+  svg{
+    scale: 1.5;
+  }
+
+  @media (min-width: $tablet){
+    width: fit-content;
   }
 }

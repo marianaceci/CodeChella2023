@@ -1,6 +1,6 @@
 import styles from "./Form.module.scss";
 import { useState } from "react";
-import flecha from "./flecha.svg";
+import { IoArrowForward } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 const emailRegex =
@@ -89,7 +89,7 @@ export default function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorNome && !errorEmail && !errorNascimento && !errorTipo) {
-      navigate("/qringresso");
+      navigate("/qringresso", {replace: true});
     } else {
       handleBlurNome();
       handleBlurEmail();
@@ -182,8 +182,7 @@ export default function Form() {
       </div>
 
       <button onClick={handleClick} type="submit" className={styles.buyTicket}>
-        Avançar!
-        <img src={flecha} alt="ícone de flecha" />
+        Avançar! <IoArrowForward />
       </button>
     </form>
   );

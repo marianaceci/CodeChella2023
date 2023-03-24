@@ -43,6 +43,9 @@
 
   button{
     width: fit-content;
+    svg{
+      scale: 1.5;
+    }
   }
 
   @media (max-width: $desktop){

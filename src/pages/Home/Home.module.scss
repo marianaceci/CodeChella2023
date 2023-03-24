@@ -1,6 +1,125 @@
 @import 'src/styles/variables';
 @import 'src/styles/breakpoints';
 
+
+@media (min-width: $mobile){
+  .container{
+    .sobre{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      &__picture img{
+        display: block;
+        width: 100%;
+      }
+
+      &__descricao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        gap: 1.5rem;
+
+        &__titulo{          
+          font-weight: 700;
+          font-size: 2rem;
+          line-height: 28px;
+        }
+
+        &__texto{
+          font-weight: 500;
+          font-size: 1.25rem;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .lineup{
+      h2{
+        font-family: 'Calistoga', cursive;
+        text-align: center;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 62px;
+      }
+    }
+
+    .rodape__picture img{
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet){
+  .container{
+    .sobre{
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 3.75rem;
+      &__descricao{
+        &__titulo{          
+          line-height: 38px;
+        }
+      }
+    }
+
+    .lineup{
+      h2{
+        font-size: 4rem;
+        line-height: 83px;
+        margin: 2rem auto;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop){
+  .container{
+    .sobre{
+      flex-direction: row;
+      gap: 3rem;
+      padding: 4rem 7.5rem;
+      &__descricao{
+        margin-top: 0;
+        &__titulo{
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+.container {
+  .sobre {
+    padding: 64px $padding-horizontal;
+    gap: 48px; 
+
+    @media (max-width: $desktop){      
+      gap: 0;
+    }
+
+    &__descricao{      
+      padding: 24px 0;
+
+      @media (max-width: $tablet){
+        padding-bottom: 0;
+      }
+
+      &__texto{              
+        padding: 24px 0;
+      }
+    }
+  }
+}
+ 
+
+
 .container {
   .sobre {
     display: flex;
@@ -66,4 +185,4 @@
   }
   
 }
- 
+ */

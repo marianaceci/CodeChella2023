@@ -4,7 +4,7 @@ import faqs from './faq.json';
 import bannerDesktop from '/Informacoes/info-banner_g.png';
 import bannerTablet from '/Informacoes/info-banner_m.png';
 import bannerMobile from '/Informacoes/info-banner_s.png';
-import arrow from './arrow_drop_down.png';
+import { BiDownArrow } from "react-icons/bi";
 
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 
@@ -28,7 +28,7 @@ export default function Informacoes(){
             header={
               <>
                 <h6 className={styles.faq__card}>{faq.pergunta}</h6>
-                <img src={arrow} alt="arrow down" />
+                <BiDownArrow />
               </>
             }
           >

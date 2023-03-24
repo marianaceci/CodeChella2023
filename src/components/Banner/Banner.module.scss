@@ -12,12 +12,23 @@
     top: 40%;
     right: 0;    
     font-family: 'Calistoga';
-    font-weight: 400;
-    font-size: 4rem;
-    line-height: 83px;
+    font-weight: 400;    
+    font-size: 2rem;
+    line-height: 42px;
+    
   }
   picture *{
     height: 405px; 
     width: 100%;
   }
 }
+
+@media(min-width: $tablet){
+  .banner{
+    h1{      
+      font-size: 4rem;
+      line-height: 83px;
+    }
+  }
+}
+

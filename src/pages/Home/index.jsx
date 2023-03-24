@@ -5,6 +5,11 @@ import Banner from '../../components/Banner';
 import bannerDesktop from '/Home/home-banner_g.png';
 import bannerTablet from '/Home/home-banner_m.png';
 import bannerMobile from '/Home/home-banner_s.png';
+import sobreMobile from '/Home/sobre_s.png';
+import sobreTD from '/Home/sobre_m_g.png';
+import rodapeMobile from '/Home/bottom_s.png';
+import rodapeTablet from '/Home/bottom_m.png';
+import rodapeDesktop from '/Home/bottom_g.png';
 
 export default function Home() {
   return (
@@ -19,9 +24,9 @@ export default function Home() {
 
       <div className={styles.container}>
         <section className={styles.sobre}>
-          <picture>
-            <source srcSet='/Home/sobre_s.png' media="(max-width: 768px)" />
-            <img src='/Home/sobre_m_g.png' alt='pessoas sorrindo assistindo ao festival' />
+          <picture className={styles.sobre__picture}>
+            <source srcSet={sobreTD} media="(min-width: 768px)" />
+            <img src={sobreMobile} alt='pessoas sorrindo assistindo ao festival' />
           </picture>
           <div className={styles.sobre__descricao}>
             <h3 className={styles.sobre__descricao__titulo}>&lt; 11 e 12 de Março &gt;<br/>Aluródromo de São Paulo</h3>
@@ -35,14 +40,12 @@ export default function Home() {
         </section>
         
         <LineUp />
-        <picture>
-          <source srcSet='/Home/bottom_s.png' media="(max-width: 768px)" />
-          <source srcSet='/Home/bottom_m.png' media="(min-width: 768px) and (max-width: 1024px)" />
-          <img className={styles.imagem_home} src='/Home/bottom_g.png' alt='pessoas dançando em festival' />
+        <picture className={styles.rodape__picture}>
+          <source srcSet={rodapeDesktop} media="(min-width: 1440px)" />
+          <source srcSet={rodapeTablet} media="(min-width: 768px)" />
+          <img src={rodapeMobile} alt='pessoas dançando em festival' />        
         </picture>
       </div>
-        
-      
     </>
   )
 }

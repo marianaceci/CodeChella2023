@@ -3,6 +3,67 @@ import { Link } from "react-router-dom";
 import { theme } from '../../styles/theme';
 
 const Ul = styled.ul`
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  padding-right: 100px;
+  box-shadow: ${({ open }) => open ? '-4px 4px 10px' : '0px 0px 0px'} ${theme.colors["azul-escuro-sombra"]};
+  background: ${theme.colors["azul-escuro"]};
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+
+  li{
+    padding-left: 20px;
+    border-bottom: 1px solid ${theme.colors.branco};
+    padding: 0.5rem 0;
+    &:last-child{
+      border-bottom: none;
+    }   
+    * {
+      text-decoration: none;
+      color: ${theme.colors.branco};
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 40px;
+    }   
+  } 
+
+  @media (min-width: ${theme.breakpoints.tablet}){
+    //width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    position: relative;
+    transform: translate(50%, 0%);
+    right: 50%;
+    box-shadow: none;
+    li{
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: ${theme.breakpoints.desktop}){
+    flex-flow: row nowrap;   
+    //width: 60%;  
+    li {    
+      * {        
+        &:hover{
+          border-bottom: 1px solid ${theme.colors.branco};
+        }
+      }
+    }
+  }
+
+`
+
+const Ul1 = styled.ul`
   display: flex;
   align-items: center; 
   flex-flow: row nowrap;   
