@@ -19,10 +19,10 @@ export default function Experiencia() {
       {experiencias.map((experiencia, index) => (
         <div className={styles.exp__card} key={index}>
           <picture>
-            <source srcSet={experiencia.source} media="(max-width: 768px)" />
+            <source srcSet={experiencia.source} media="(min-width: 768px)" />
             <img src={experiencia.foto} alt={experiencia.alt} />
           </picture>
-          <div className={styles.exp__card__texto}>
+          <div className={styles.exp__texto}>
             <h6>{experiencia.titulo}</h6>
             <p>{experiencia.paragrafo}</p>
           </div>
