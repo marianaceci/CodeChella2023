@@ -15,7 +15,7 @@ const Ul = styled.ul`
   box-shadow: ${({ open }) => open ? '-4px 4px 10px' : '0px 0px 0px'} ${theme.colors["azul-escuro-sombra"]};
   background: ${theme.colors["azul-escuro"]};
   transition: transform 0.3s ease-in-out;
-  z-index: 1;
+  z-index: 19;
 
   li{
     padding-left: 20px;
@@ -34,7 +34,7 @@ const Ul = styled.ul`
   } 
 
   @media (min-width: ${theme.breakpoints.tablet}){
-    //width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,9 +49,11 @@ const Ul = styled.ul`
     }
   }
 
-  @media (min-width: ${theme.breakpoints.desktop}){
-    flex-flow: row nowrap;   
-    //width: 60%;  
+  @media (min-width: ${theme.breakpoints.desktop}){  
+    width: auto;  
+    transform: none;
+    right: 0;
+    gap: 2rem;
     li {    
       * {        
         &:hover{

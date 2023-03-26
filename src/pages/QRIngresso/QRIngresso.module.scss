@@ -1,6 +1,88 @@
 @import 'src/styles/variables';
 @import 'src/styles/breakpoints';
 
+
+@media (min-width: $mobile){
+  .qr{
+    padding: 4rem 1.5rem;
+    color: $cinza;
+    &__titulo{
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      display: flex;
+      align-items: center;
+      text-align: center;  
+      margin-bottom: 2rem;
+    }
+  
+    &__card{   
+      padding: 2rem;
+      background: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15); 
+      &__logos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+  
+      &__info{           
+        display: flex;
+        align-items: center;   
+        flex-direction: column;
+        text-align: center;
+        &__text{
+          color: $cinza;
+          font-weight: 500;
+          font-size: 1.25rem;
+          line-height: 40px;
+          h6{
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 38px;
+            margin: 1.5rem auto;
+          }
+        }
+      }  
+    }
+  }
+}
+
+@media (min-width: $tablet){
+  .qr{
+    padding: 4rem 3.75rem;    
+  }
+}
+
+@media (min-width: $desktop){
+  .qr{
+    padding: 2rem 20rem;  
+    &__card{    
+      &__info{ 
+        gap: 3rem;
+        flex-direction: row;
+        &__text{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content:center;
+          h6{
+            margin: 0;
+            padding-bottom: 1.5rem;
+          }
+        }
+      }  
+    }
+  }
+}
+
+
+
+/*
+@import 'src/styles/variables';
+@import 'src/styles/breakpoints';
+
 .qr{
   padding: 2rem 20rem;
 
@@ -56,7 +138,8 @@
           margin-bottom: 1.5rem;
         }
       }
-    }
-  
+    }  
   }
 }
+
+*/

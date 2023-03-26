@@ -1,10 +1,89 @@
-@import '/src/styles/variables';
-@import 'src/styles/breakpoints';
+@import "/src/styles/variables";
+@import "src/styles/breakpoints";
 
+@media (min-width: $mobile) {
+  .lineup {
+    color: $cinza;
+    &__header {
+      font-size: 3rem;
+      line-height: 62px;
+      font-family: "Calistoga", cursive;
+      font-weight: 400;
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    &__programa {
+      &__data {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        hr {
+          display: none;
+        }
+        h3 {
+          line-height: 42px;
+          background-color: $mostarda;
+          color: $branco;
+          font-family: "Calistoga", cursive;
+          font-size: 2rem;
+          padding: 1rem;
+          text-align: center;
+          text-transform: uppercase;
+          margin: 3rem auto 0 auto;
+        }
+      }
+    }  
+  }  
+}
+
+@media (min-width: $tablet) {
+  .lineup {
+    &__header {
+      font-size: 4rem;
+      line-height: 83px;
+    }
+    &__programa {
+      &__data {
+        padding-top: 3rem;
+        hr {
+          display: inline-block;
+          border-color: $mostarda;
+          width: 15%;
+          margin: 0 auto;
+        }
+        h3 {
+          font-size: 3rem;
+          line-height: 62px;
+          margin-top: 0;
+        }
+      }      
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .lineup {
+    display: flex;
+    flex-direction: column;   
+    hr{
+      width: 25%;;
+    } 
+  }
+}
+
+/*
 .lineup{ 
   display: flex;
   flex-direction: column;
-  
+  color: $cinza;
+  &__header{
+    font-family: 'Calistoga', cursive;
+      font-size: 4rem;
+      
+      text-align: center;
+      padding: 2rem 0;
+  }
   &__data {
     display: flex;
     align-items: center;
@@ -45,8 +124,7 @@
   }
 
   &__bandas {
-    margin: 3rem auto;
-    color: $cinza;
+    margin: 3rem auto;    
     display: flex;
     flex-direction: column;
     row-gap: 2rem; 
@@ -93,3 +171,4 @@
     }
   }
 }
+*/

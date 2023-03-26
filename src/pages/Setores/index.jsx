@@ -1,14 +1,14 @@
 import Banner from '../../components/Banner';
 import styles from './Setores.module.scss';
 import detalhes from './detalhes.json';
-import bannerDesktop from '/Setores/setores-banner_s_m_g.png';
+import bannerAll from '/Setores/setores-banner_s_m_g.png';
 
 
 export default function Setores(){
   return (
     <section>      
       <Banner
-        src={bannerDesktop}
+        srcMobile={bannerAll}
         alt="céu azul"
         titulo="Mapa de Setores"
       />

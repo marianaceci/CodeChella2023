@@ -9,10 +9,10 @@ export default function Experiencia() {
   return (
     <section className={styles.exp}>
       <Banner
-        src={bannerDesktop}
+        srcMobile={bannerMobile}
         alt="Pessoas dançando"
         srcsetTablet={bannerTablet}
-        srcsetMobile={bannerMobile}
+        srcsetDesktop={bannerDesktop}
         titulo="A Experiência"
       />
 

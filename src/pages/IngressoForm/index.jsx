@@ -9,10 +9,10 @@ export default function IngressoForm(){
   return (
     <section className={styles.ingresso}>        
       <Banner
-        src={bannerDesktop}
+        srcMobile={bannerMobile}
         alt="pessoas dançando e comemorando"
         srcsetTablet={bannerTablet}
-        srcsetMobile={bannerMobile}
+        srcsetDesktop={bannerDesktop}
         titulo="Garanta seu Ingresso"
       />
       <h3>Preencha o formulário a seguir:</h3>

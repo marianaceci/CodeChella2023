@@ -18,11 +18,11 @@ Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, pró
 
 
 *************************************************
-- mudar para @media(min-width)
+- fazer data folder
 - arrumar LINEUP
 - ajustar .json do lineup
 - add trocar theme
-- add campos de dataEvento, e setor no ingressoForm
+- fazer pagina Not Found
 *************************************************
 
 

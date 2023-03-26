@@ -1,6 +1,170 @@
 @import 'src/styles/variables';
 @import 'src/styles/breakpoints';
 
+@media (min-width: $mobile){
+  .mapa{
+    color: #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    img{
+      width: 100%;
+    }
+    &__legenda{
+      margin-top: 2rem;
+      h6{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+      }
+      ul{
+        margin-top: 1.5rem;
+        li{
+          display: flex;
+          justify-self: center;
+          font-weight: 500;
+          font-size: 1.25rem;
+          line-height: 40px;
+          padding: 1rem 0;
+                       
+          &::before{
+            margin-right: 1rem;
+          }        
+          &:first-child::before{
+            content: url('./legenda/pistapremium.png');
+          }
+          &:nth-child(2)::before{
+            content: url('./legenda/pistacomum.png');
+          }
+          &:nth-child(3)::before{
+            content: url('./legenda/cadeiraterreo.png');
+          }
+          &:nth-child(4)::before{
+            content: url('./legenda/cadeirasuperior.png');
+          }
+          &:last-child::before{
+            content: url('./legenda/rampas.png');
+          }
+        }
+      }
+    }
+  }
+  .detalhes{
+    padding: 2rem 1.5rem;
+    color: #444444;
+    h5{
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 38px;
+      padding-bottom: 2rem;
+    }
+    &__cards{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    &__card{
+      text-align: center;
+      img{
+        width: 100%;
+      }
+      &:nth-child(2){
+        margin-top: 0;
+      }
+      h6{        
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 38px;
+        padding: 1.5rem 0;
+      }
+      p{        
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet){
+  .mapa{
+    padding: 2rem 3.75rem;
+    &__legenda{
+      margin-left: 0;
+      padding: 0;
+      h6{
+        font-size: 2.5rem
+      }
+      ul{
+        li{
+          font-size: 2rem
+        }
+      }
+    }
+  }
+  .detalhes{
+    h5{
+      font-size: 2.5rem;
+      line-height: 47px;
+    }
+    &__card{
+      img{
+        width: 383px;
+        height: 239px;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop){
+  .mapa{
+    padding: 2rem;
+    flex-direction: row;
+    img{
+      width: 690px;
+      height: 609px;
+    }
+    &__legenda{
+      margin-left: 3rem;
+    }
+  }
+
+  .detalhes{
+    h5{
+      font-size: 3rem;
+    }
+    &__cards{
+      display: flex;  
+      flex-direction: row; 
+      align-items: flex-start;
+      padding: 0 5vw;
+      gap: 1.5rem;
+    }
+    &__card{
+      &:nth-child(2){
+        margin-top: 6.5rem;
+      }
+      h6{}
+      p{}
+    }
+  }
+}
+
+
+//////////////////////////////////////////////
+
+
+
+
+/*
+
 .mapa{
   color: #444444;
   display: flex;
@@ -113,3 +277,5 @@
     }
   }
 }
+
+*/

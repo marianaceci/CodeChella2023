@@ -32,9 +32,8 @@
   }
 
   &__autor{
-      text-align: center;   
-      margin-top: 2rem;
-    
+    text-align: center;   
+    margin-top: 2rem;    
   }
 }
 
@@ -51,11 +50,11 @@
     padding: 1.5rem 0;
   
     &__redes {
-      text-align: center;
-      
+      text-align: center;      
   
       &__icons{
         display: flex;
+        flex-direction: row;
         align-items: center;
         ul{
           display: flex;
@@ -77,9 +76,9 @@
 
 @media(min-width: $desktop){
   .footer{
-    padding: 5rem $padding-horizontal;
+    padding: 3.75rem 7.5rem;
     background-color: $amarelo;
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     font-weight: 500;
@@ -87,9 +86,8 @@
     font-size: 1.25rem;
   
     &__redes {      
+      text-align: start;
       &__icons{
-        display: flex;
-        align-items: center;
         ul{
           display: flex;
           align-items: center;
@@ -98,6 +96,11 @@
           }      
         } 
       }
+    }
+
+    &__autor{
+      flex-direction: column;
+      text-align: start;
     }
   }
 }

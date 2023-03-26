@@ -26,7 +26,7 @@
         &__titulo{          
           font-weight: 700;
           font-size: 2rem;
-          line-height: 28px;
+          line-height: 38px;
         }
 
         &__texto{
@@ -36,17 +36,6 @@
         }
       }
     }
-
-    .lineup{
-      h2{
-        font-family: 'Calistoga', cursive;
-        text-align: center;
-        font-weight: 400;
-        font-size: 3rem;
-        line-height: 62px;
-      }
-    }
-
     .rodape__picture img{
       display: block;
       width: 100%;
@@ -66,14 +55,6 @@
         }
       }
     }
-
-    .lineup{
-      h2{
-        font-size: 4rem;
-        line-height: 83px;
-        margin: 2rem auto;
-      }
-    }
   }
 }
 
@@ -83,6 +64,9 @@
       flex-direction: row;
       gap: 3rem;
       padding: 4rem 7.5rem;
+      &__picture img{
+        width: auto;
+      }
       &__descricao{
         margin-top: 0;
         &__titulo{

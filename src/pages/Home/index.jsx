@@ -10,21 +10,15 @@ import sobreTD from '/Home/sobre_m_g.png';
 import rodapeMobile from '/Home/bottom_s.png';
 import rodapeTablet from '/Home/bottom_m.png';
 import rodapeDesktop from '/Home/bottom_g.png';
-import { getListaProgramacao } from './LineUp/programacao';
 
 export default function Home() {
-  const TodasAsBandas = getListaProgramacao();
-  const bandasSabado = TodasAsBandas.filter(banda => banda.dia === 'sabado')
-  const bandasDomingo = TodasAsBandas.filter(banda => banda.dia === 'domingo')
-
-
   return (
     <>
       <Banner
-        src={bannerDesktop}
+        srcMobile={bannerMobile}
         alt="foto do brinquedo chapéu mexicano"
         srcsetTablet={bannerTablet}
-        srcsetMobile={bannerMobile}
+        srcsetDesktop={bannerDesktop}
         titulo="Boas-vindas ao #CodeChella2023!"
       />
 
@@ -40,13 +34,9 @@ export default function Home() {
             <BuyTicketButton texto="Comprar Ingresso" />
           </div>          
         </section>
+               
+        <LineUp />
 
-        <section className={styles.lineup}>
-          <h2>\Line-Up\</h2>
-          <LineUp programacao={bandasSabado} dia='sábado' data='11/03' />
-          <LineUp programacao={bandasDomingo} dia='domingo' data='12/03' />
-        </section>
-        
         <picture className={styles.rodape__picture}>
           <source srcSet={rodapeDesktop} media="(min-width: 1440px)" />
           <source srcSet={rodapeTablet} media="(min-width: 768px)" />

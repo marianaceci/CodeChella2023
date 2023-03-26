@@ -20,16 +20,23 @@ export default function QRIngresso() {
     return tipoSalvo;
   });
 
-
-
+  const [setor, setSetor] = useState(() => {
+    const setorSalvo = localStorage.getItem("setor");
+    return setorSalvo;
+  });
+  
+  const [data, setData] = useState(() => {
+    const dataSalvo = localStorage.getItem("data");
+    return dataSalvo;
+  });
 
   return (
     <section>      
       <Banner
-        src={bannerDesktop}
+        srcMobile={bannerMobile}
         alt="duas meninas conversando e rindo"
         srcsetTablet={bannerTablet}
-        srcsetMobile={bannerMobile}
+        srcsetDesktop={bannerDesktop}
         titulo="Seu ingresso está aqui!"
       />
       <div className={styles.qr}>
@@ -46,8 +53,8 @@ export default function QRIngresso() {
             <div className={styles.qr__card__info__text}>
               <h6>{nome}</h6>
               <p>{tipo}</p>
-              <p>Setor Pista</p>
-              <p>Data: 11/03</p>
+              <p>Setor: {setor}</p>
+              <p>Data: {data}</p>
               <p>Local: São Paulo-SP</p>
             </div>
           </div>

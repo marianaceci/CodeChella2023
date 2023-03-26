@@ -13,10 +13,10 @@ export default function Informacoes(){
   return (
     <section className={styles.informacoes}>
       <Banner
-        src={bannerDesktop}
+        srcMobile={bannerMobile}
         alt="público assistindo a um show"
         srcsetTablet={bannerTablet}
-        srcsetMobile={bannerMobile}
+        srcsetDesktop={bannerDesktop}
         titulo="Informações Gerais"
       />
       <h3 className={styles.titulo__pagina}>Perguntas Frequentes:</h3>
