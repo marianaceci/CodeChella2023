@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import styles from "./PaginaPadrao.module.scss";
+import {MainContainer} from './style'
 
 export default function PaginaPadrao() {
   return (
-    <main>      
-      <div className={styles.main__container}>
+    <MainContainer>      
+      <div className="container">
         <Outlet />
       </div>
-    </main>
+    </MainContainer>
   );
 }

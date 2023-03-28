@@ -1,33 +1,36 @@
 import Banner from "../../components/Banner";
-import styles from "./Experiencia.module.scss";
+import { Experience } from "./style";
 import experiencias from "./experiencias.json";
-import bannerDesktop from '/Experiencia/experiencia-banner_g.png';
-import bannerTablet from '/Experiencia/experiencia-banner_m.png';
-import bannerMobile from '/Experiencia/experiencia-banner_s.png';
+import bannerDesktop from "/Experiencia/bannerG.png";
+import bannerTablet from "/Experiencia/bannerM.png";
+import bannerMobile from "/Experiencia/bannerS.png";
+import {variaveis} from "@/styles/variaveis";
 
 export default function Experiencia() {
   return (
-    <section className={styles.exp}>
+    <>
       <Banner
         srcMobile={bannerMobile}
         alt="Pessoas dançando"
-        srcsetTablet={bannerTablet}
-        srcsetDesktop={bannerDesktop}
+        srcTablet={bannerTablet}
+        srcDesktop={bannerDesktop}
         titulo="A Experiência"
       />
 
-      {experiencias.map((experiencia, index) => (
-        <div className={styles.exp__card} key={index}>
-          <picture>
-            <source srcSet={experiencia.source} media="(min-width: 768px)" />
-            <img src={experiencia.foto} alt={experiencia.alt} />
-          </picture>
-          <div className={styles.exp__texto}>
-            <h6>{experiencia.titulo}</h6>
-            <p>{experiencia.paragrafo}</p>
+      <Experience>
+        {experiencias.map((experiencia, index) => (
+          <div className="card " key={index}>
+            <picture>
+              <source srcSet={experiencia.source} media={`(min-width: ${variaveis.breakpoints.tablet})`} />
+              <img src={experiencia.foto} alt={experiencia.alt} />
+            </picture>
+            <div className="texto">
+              <h6>{experiencia.titulo}</h6>
+              <p>{experiencia.paragrafo}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </section>
+        ))}
+      </Experience>
+    </>
   );
 }

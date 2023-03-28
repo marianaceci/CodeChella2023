@@ -1,10 +1,10 @@
-import styles from "./BuyTicket.module.scss";
 import { BsFillTicketDetailedFill } from "react-icons/bs";
+import { BotaoIngresso } from "./style";
 
 export default function BuyTicketButton({texto}) {
   return (
-      <a className={styles.buyTicket}>{texto}
+      <BotaoIngresso>{texto}
         <BsFillTicketDetailedFill />
-      </a>
+      </BotaoIngresso>
   );
 }

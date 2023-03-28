@@ -1,14 +1,27 @@
-import styles from './Banner.module.scss';
+import { BannerSection } from './style';
+import { variaveis } from "@/styles/variaveis";
 
-export default function Banner({titulo, srcsetTablet, srcsetDesktop, srcMobile, alt}) {
+export default function Banner({titulo, srcTablet, srcDesktop, srcMobile, alt}) {
   return (
-    <header className={styles.banner}>
+    <BannerSection>
       <h1>{titulo}</h1>
       <picture>
-        <source srcSet={srcsetTablet} media= "(min-width: 768px)"  />
-        <source srcSet={srcsetDesktop} media="(min-width: 1440px)" />
-        <img src={srcMobile} alt={alt} />
+        <source
+          media={`(min-width: ${variaveis.breakpoints.desktop})`}
+          srcSet={`${srcDesktop} 1440w`}
+          sizes={`${variaveis.breakpoints.desktop}`}        
+        />
+        <source
+          media={`(min-width: ${variaveis.breakpoints.tablet})`}
+          srcSet={`${srcTablet} 768w`}
+          sizes={`${variaveis.breakpoints.tablet}`}        
+        />
+        <img
+          src={srcMobile}
+          alt={alt}      
+        />
       </picture>
-    </header>
+        
+    </BannerSection>
   )
 }

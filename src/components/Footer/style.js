@@ -1,8 +1,8 @@
-@import 'src/styles/variables';
-@import 'src/styles/breakpoints';
+import styled from "styled-components";
+import { variaveis } from "@/styles/variaveis";
 
-.footer{
-  background-color: $amarelo;
+export const FooterSection = styled.footer`
+  background-color: ${variaveis.summer.amarelo};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,14 +12,14 @@
   flex-direction: column; 
   padding: 1.5rem;
 
-  &__redes {   
+  .redes {   
 
-    &__icons{
+    .icons{
       display: flex;
       align-items: center;
       flex-direction: column;  
       svg{
-        color: $cinza;
+        color: ${variaveis.summer.cinza};
       }
       ul{
         display: flex;
@@ -31,15 +31,13 @@
     }
   }
 
-  &__autor{
+  .autor{
     text-align: center;   
     margin-top: 2rem;    
   }
 }
 
-@media(min-width: $tablet){
-  .footer{
-    background-color: $amarelo;
+  @media screen and (min-width: ${variaveis.breakpoints.tablet}) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,10 +47,10 @@
     flex-direction: column;    
     padding: 1.5rem 0;
   
-    &__redes {
+    .redes {
       text-align: center;      
   
-      &__icons{
+      .icons{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -66,18 +64,15 @@
       }
     }
   
-    &__autor{
+    .autor{
       display: flex;
       margin-top: 2rem;
       gap: 5px;
     }
   }
-}
 
-@media(min-width: $desktop){
-  .footer{
+  @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
     padding: 3.75rem 7.5rem;
-    background-color: $amarelo;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -85,9 +80,9 @@
     line-height: 40px;
     font-size: 1.25rem;
   
-    &__redes {      
+    .redes {      
       text-align: start;
-      &__icons{
+      .icons{
         ul{
           display: flex;
           align-items: center;
@@ -98,9 +93,12 @@
       }
     }
 
-    &__autor{
+    .autor{
       flex-direction: column;
       text-align: start;
     }
   }
-}
+`;
+
+
+

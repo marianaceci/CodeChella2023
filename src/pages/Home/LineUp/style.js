@@ -1,4 +1,70 @@
 import styled from "styled-components";
+import { variaveis } from "@/styles/variaveis";
+
+export const LineupSection = styled.section`
+  color: ${variaveis.summer.cinza};
+  .header {
+    font-size: 3rem;
+    line-height: 62px;
+    font-family: "Calistoga", cursive;
+    font-weight: 400;
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  .programa {
+    .data {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      hr {
+        display: none;
+      }
+      h3 {
+        line-height: 42px;
+        background-color: ${variaveis.summer.mostarda};
+        color: ${variaveis.summer.branco};
+        font-family: "Calistoga", cursive;
+        font-size: 2rem;
+        padding: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 3rem auto 0 auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: ${variaveis.breakpoints.tablet}) {
+    .header {
+      font-size: 4rem;
+      line-height: 83px;
+    }
+    .programa {
+      .data {
+        padding-top: 3rem;
+        hr {
+          display: inline-block;
+          border-color: ${variaveis.summer.mostarda};
+          width: 15%;
+          margin: 0 auto;
+        }
+        h3 {
+          font-size: 3rem;
+          line-height: 62px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
+    display: flex;
+    flex-direction: column;
+    hr {
+      width: 25%;
+    }
+  }
+`;
 
 export const Banda = styled.div`
   display: flex;
@@ -9,12 +75,12 @@ export const Banda = styled.div`
   align-items: center;
   justify-content: center;
 
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
-    @media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
@@ -37,11 +103,11 @@ export const Banda = styled.div`
   .estilo__banda3 {
     font-weight: 700;
     font-size: 2rem;
-    line-height: 2.375rem;    
+    line-height: 2.375rem;
   }
   .estilo__banda4 {
     font-weight: 500;
     font-size: 2rem;
-    line-height: 2.375rem;    
+    line-height: 2.375rem;
   }
-`
+`;

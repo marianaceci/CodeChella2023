@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import { theme } from '../../styles/theme';
+import { variaveis } from '../../styles/variaveis';
 
 const Ul = styled.ul`
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -12,28 +12,28 @@ const Ul = styled.ul`
   right: 0;
   padding: 1rem;
   padding-right: 100px;
-  box-shadow: ${({ open }) => open ? '-4px 4px 10px' : '0px 0px 0px'} ${theme.colors["azul-escuro-sombra"]};
-  background: ${theme.colors["azul-escuro"]};
+  box-shadow: ${({ open }) => open ? '-4px 4px 10px' : '0px 0px 0px'} ${variaveis.summer.azulEscuroSombra};
+  background: ${variaveis.summer.azulEscuro};
   transition: transform 0.3s ease-in-out;
   z-index: 19;
 
   li{
     padding-left: 20px;
-    border-bottom: 1px solid ${theme.colors.branco};
+    border-bottom: 1px solid ${variaveis.summer.branco};
     padding: 0.5rem 0;
     &:last-child{
       border-bottom: none;
     }   
     * {
       text-decoration: none;
-      color: ${theme.colors.branco};
+      color: ${variaveis.summer.branco};
       font-weight: 700;
       font-size: 1.25rem;
       line-height: 40px;
     }   
   } 
 
-  @media (min-width: ${theme.breakpoints.tablet}){
+  @media (min-width: ${variaveis.breakpoints.tablet}){
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@ const Ul = styled.ul`
     }
   }
 
-  @media (min-width: ${theme.breakpoints.desktop}){  
+  @media (min-width: ${variaveis.breakpoints.desktop}){  
     width: auto;  
     transform: none;
     right: 0;
@@ -57,62 +57,10 @@ const Ul = styled.ul`
     li {    
       * {        
         &:hover{
-          border-bottom: 1px solid ${theme.colors.branco};
+          border-bottom: 1px solid ${variaveis.summer.branco};
         }
       }
     }
-  }
-
-`
-
-const Ul1 = styled.ul`
-  display: flex;
-  align-items: center; 
-  flex-flow: row nowrap;   
-  justify-content: space-between;
-  width: 60%;
-
-  li {    
-    * {
-      text-decoration: none;
-      color: ${theme.colors.branco};
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 40px;
-      &:hover{
-        border-bottom: 1px solid ${theme.colors.branco};
-      }
-    }
-  }
-
-  @media (max-width: ${theme.breakpoints.tablet}){
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-    flex-flow: column nowrap;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 200px;
-    padding-right: 100px;
-    height: fit-content;
-    box-shadow: ${({ open }) => open ? '-4px 4px 10px' : '0px 0px 0px'} ${theme.colors["azul-escuro-sombra"]};
-    background: ${theme.colors["azul-escuro"]};
-    transition: transform 0.3s ease-in-out;
-
-    li{
-      padding-left: 20px;
-      border-bottom: 1px solid ${theme.colors.branco};
-      padding: 0.5rem 0;
-      &:last-child{
-        border-bottom: none;
-      }
-      
-    } 
-  }
-
-  @media (max-width: ${theme.breakpoints.desktop}){
-    width: 100%;
-    display: flex;
-    align-items: center;
   }
 
 `

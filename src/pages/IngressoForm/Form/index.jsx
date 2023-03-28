@@ -1,8 +1,8 @@
-import styles from "./Form.module.scss";
 import { useState } from "react";
 import { IoArrowForward } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import {dataEvento, setorLista, tiposDeIngresso} from '../../../assets/data/dataForm.js'
+import { FormSection } from "./style";
 
 const emailRegex =
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -135,8 +135,8 @@ export default function Form() {
   };
 
   return (
-    <form className={styles.formulario} onSubmit={handleSubmit}>
-      <div className={styles.formulario__campo}>
+    <FormSection onSubmit={handleSubmit}>
+      <div className="campo">
         <label htmlFor="nome">Nome Completo:</label>
         <input
           required
@@ -148,13 +148,13 @@ export default function Form() {
           onInvalid={(e) => e.preventDefault()}
         />
         {errorNome && (
-          <span className={styles.mensagem_erro}>
+          <span className="mensagemErro">
             Nome deve ter mais do que um caracter
           </span>
         )}
       </div>
 
-      <div className={styles.formulario__campo}>
+      <div className="campo">
         <label htmlFor="email">Email:</label>
         <input
           required
@@ -167,17 +167,17 @@ export default function Form() {
           onInvalid={(e) => e.preventDefault()}
         />
         {errorEmail && (
-          <span className={styles.mensagem_erro}>Digite um e-mail vádilo</span>
+          <span className="mensagemErro">Digite um e-mail vádilo</span>
         )}
       </div>
 
-      <div className={styles.divisaoCampos}>
+      <div className="divisaoCampos">
 
-        <div className={styles.formulario__campo}>
+        <div className="campo">
           <label>Tipo de ingresso</label>
           <select
             required
-            className={styles.dropdown__select}
+            className="dropdownSelect"
             value={tipo}
             onChange={onChangeTipo}
             onBlur={handleBlurTipo}
@@ -189,13 +189,13 @@ export default function Form() {
             ))}
           </select>
           {errorTipo && (
-            <span className={styles.mensagem_erro}>
+            <span className="mensagemErro">
               Escolha um tipo de ingresso
             </span>
           )}
         </div>
 
-        <div className={styles.formulario__campo}>
+        <div className="campo">
           <label htmlFor="nascimento">Data de nascimento:</label>
           <input
             required
@@ -207,7 +207,7 @@ export default function Form() {
             onInvalid={(e) => e.preventDefault()}
           />
           {errorNascimento && (
-            <span className={styles.mensagem_erro}>
+            <span className="mensagemErro">
               O usuário deve ser maior de idade
             </span>
           )}
@@ -215,13 +215,13 @@ export default function Form() {
 
       </div>
 
-      <div className={styles.divisaoCampos}>
+      <div className="divisaoCampos">
 
-        <div className={styles.formulario__campo}>
+        <div className="campo">
           <label>Setor</label>
           <select
             required
-            className={styles.dropdown__select}
+            className="dropdownSelect"
             value={setor}
             onChange={onChangeSetor}
             onBlur={handleBlurSetor}
@@ -233,17 +233,17 @@ export default function Form() {
             ))}
           </select>
           {errorSetor && (
-            <span className={styles.mensagem_erro}>
+            <span className="mensagemErro">
               Escolha um setor
             </span>
           )}
         </div>
 
-        <div className={styles.formulario__campo}>
+        <div className="campo">
         <label>Data do evento</label>
           <select
             required
-            className={styles.dropdown__select}
+            className="dropdownSelect"
             value={data}
             onChange={onChangeData}
             onBlur={handleBlurData}
@@ -255,7 +255,7 @@ export default function Form() {
             ))}
           </select>
           {errorData && (
-            <span className={styles.mensagem_erro}>
+            <span className="mensagemErro">
               Escolha a data do evento
             </span>
           )}
@@ -263,9 +263,9 @@ export default function Form() {
 
       </div>
 
-      <button onClick={handleClick} type="submit" className={styles.buyTicket}>
+      <button onClick={handleClick} type="submit" className="buyTicket">
         Avançar! <IoArrowForward />
       </button>
-    </form>
+    </FormSection>
   );
 }

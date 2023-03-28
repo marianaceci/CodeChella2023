@@ -8,22 +8,24 @@ import Setores from "./pages/Setores";
 import Informacoes from "./pages/Informacoes";
 import IngressoForm from "./pages/IngressoForm";
 import QRIngresso from "./pages/QRIngresso";
+import { GlobalStyle } from "./styles/GlobalStyle";
 
 export default function AppRouter() {
   return (
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<PaginaPadrao />}>
-            <Route index element={<Home />} />
-            <Route path="experiencia" element={<Experiencia />} />
-            <Route path="setores" element={<Setores />} />
-            <Route path="informacoes" element={<Informacoes />} />
-            <Route path="ingresso" element={<IngressoForm />} />
-            <Route path="qringresso" element={<QRIngresso />} />
-          </Route>
-        </Routes>
-        <Footer />
-      </Router>
+    <Router>
+      <GlobalStyle />
+      <Header />
+      <Routes>
+        <Route path="/" element={<PaginaPadrao />}>
+          <Route index element={<Home />} />
+          <Route path="experiencia" element={<Experiencia />} />
+          <Route path="setores" element={<Setores />} />
+          <Route path="informacoes" element={<Informacoes />} />
+          <Route path="ingresso" element={<IngressoForm />} />
+          <Route path="qringresso" element={<QRIngresso />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
