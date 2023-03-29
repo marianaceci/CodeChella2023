@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const InfoSection = styled.section`
-color: ${variaveis.summer.cinza};
+color: ${({theme}) => theme.fontColor};
 .titulo{
   font-family: ${variaveis.fontFamily.secundaria};
   font-weight: 400;
@@ -16,7 +16,7 @@ color: ${variaveis.summer.cinza};
   button{
     text-align: start;
     border: none;
-    background-color: ${variaveis.summer.azulEscuro};
+    background-color: ${({theme}) => theme.header};
     display: flex;
     align-items: center;
     justify-content: space-between;

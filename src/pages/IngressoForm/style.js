@@ -8,7 +8,7 @@ export const IngressoSection = styled.section`
     font-weight: 400;
     font-size: 2rem;
     line-height: 42px;
-    color: ${variaveis.summer.cinza};
+    color: ${({theme}) => theme.fontColor};
     padding: 2rem 1.5rem;
   }
   @media screen and (min-width: ${variaveis.breakpoints.tablet}) {

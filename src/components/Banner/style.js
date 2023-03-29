@@ -4,7 +4,7 @@ import { variaveis } from "@/styles/variaveis";
 export const BannerSection = styled.div`
   position: relative;
   h1{
-    color: ${variaveis.summer.cinza};
+    color: ${({theme}) => theme.fontColor};
     position: absolute;
     width: 100%;
     text-align: center;

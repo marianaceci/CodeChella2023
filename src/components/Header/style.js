@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const HeaderNav = styled.nav`
-  background-color: ${variaveis.summer.azulEscuro};
+  background-color: ${({theme}) => theme.header};
   display: flex;
   padding: 2rem 1.5rem;
   align-items: center;
@@ -16,7 +16,6 @@ export const HeaderNav = styled.nav`
   }
 
   @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
-    height: 65px;
     flex-direction: row;
     padding: 2rem 7.5rem;
     .logo:hover{

@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const BotaoIngresso = styled.div`
-    background-color: ${variaveis.summer.azulEscuro};
+    background-color: ${({theme}) => theme.fundoBotao};
     padding: 0.5rem 1rem;
     color: ${variaveis.summer.branco};
-    box-shadow: 4px 4px 0px ${variaveis.summer.azulEscuroSombra};
+    box-shadow: 4px 4px 0px ${variaveis.summer.preto};
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@ export const BotaoIngresso = styled.div`
     font-size: 1.25rem;
     line-height: 40px;
     &:hover{
-      background-color: ${variaveis.summer.hover};
+      background-color: ${({theme}) => theme.hover};
       cursor: pointer;
     }
     svg{

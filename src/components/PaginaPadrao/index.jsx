@@ -1,12 +1,16 @@
 import { Outlet } from "react-router-dom";
-import {MainContainer} from './style'
+import Footer from "../Footer";
+import Header from "../Header";
+import { MainContainer } from "./style";
 
 export default function PaginaPadrao() {
   return (
-    <MainContainer>      
-      <div className="container">
+    <>
+      <Header />
+      <MainContainer>
         <Outlet />
-      </div>
-    </MainContainer>
+      </MainContainer>
+      <Footer />
+    </>
   );
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const FormSection = styled.form`
-  color: ${variaveis.summer.cinza};
+  color: ${({theme}) => theme.fontColor};
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -46,11 +46,11 @@ export const FormSection = styled.form`
     }
   }
   .buyTicket {
-    background-color: ${variaveis.summer.azulEscuro};
-    border: 1px solid ${variaveis.summer.azulEscuro};
+    background-color: ${({theme}) => theme.fundoBotao};
+    border: 1px solid ${({theme}) => theme.fundoBotao};
     padding: 0.5rem 1rem;
     color: ${variaveis.summer.branco};
-    box-shadow: 4px 4px 0px ${variaveis.summer.azulEscuroSombra};
+    box-shadow: 4px 4px 0px ${variaveis.summer.preto};
     border-radius: 1rem;
     width: 150px;
     display: flex;

@@ -12,8 +12,8 @@ const Ul = styled.ul`
   right: 0;
   padding: 1rem;
   padding-right: 100px;
-  box-shadow: ${({ open }) => open ? '-4px 4px 10px' : '0px 0px 0px'} ${variaveis.summer.azulEscuroSombra};
-  background: ${variaveis.summer.azulEscuro};
+  box-shadow: ${({ open }) => open ? '-4px 4px 10px' : '0px 0px 0px'} ${variaveis.summer.preto};
+  background: ${({theme}) => theme.header};
   transition: transform 0.3s ease-in-out;
   z-index: 19;
 

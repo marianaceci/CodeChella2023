@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const FooterSection = styled.footer`
-  background-color: ${variaveis.summer.amarelo};
+  background-color: ${({ theme }) => theme.footer};
+  color: ${({theme}) => theme.fontColor};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +20,7 @@ export const FooterSection = styled.footer`
       align-items: center;
       flex-direction: column;  
       svg{
-        color: ${variaveis.summer.cinza};
+        color: ${({theme}) => theme.fontColor};
       }
       ul{
         display: flex;

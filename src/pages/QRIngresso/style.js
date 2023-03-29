@@ -3,7 +3,7 @@ import { variaveis } from "@/styles/variaveis";
 
 export const QRCodeSection = styled.section`
   padding: 4rem 1.5rem;
-  color: ${variaveis.summer.cinza};
+  color: ${({theme}) => theme.fontColor};
   .titulo {
     font-weight: 700;
     font-size: 32px;
@@ -16,7 +16,7 @@ export const QRCodeSection = styled.section`
 
   .card {
     padding: 2rem;
-    background: linear-gradient(180deg, #bfdae6 0%, #fcf0dd 50%, #facf9d 100%);
+    background: ${({theme}) => theme.gradiente};
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
     .logos {
       display: flex;

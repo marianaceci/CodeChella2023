@@ -1,8 +1,11 @@
-import logo from './logo-footer.svg';
 import { BsWhatsapp, BsTwitch, BsInstagram, BsTwitter } from "react-icons/bs";
 import { FooterSection } from './style';
+import { useTheme } from "styled-components";
 
 export default function Footer() {
+  const theme = useTheme();
+  const logo = theme.logo;
+
   return (
     <FooterSection>      
       <div className="redes">

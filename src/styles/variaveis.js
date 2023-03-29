@@ -11,6 +11,7 @@ export const variaveis = {
     azulClaro: "#C8DEEF",
     mostarda: "#DF9010",
     coral: "#FBF0DD",
+    preto: "#000000",
     branco: "rgba(255, 255, 255, 1)",
     cinza: "rgba(68, 68, 68, 1)",
     hover: "rgba(81, 158, 197, 1)",
@@ -23,10 +24,11 @@ export const variaveis = {
     azulEscuro: "#4650BD",
     verdeEscuro: "#008364",
     azulEscuroMenu: "#2E7BA2",
-    azulHover: "#606ADA",
+    hover: "#606ADA",
+    preto: "#000000",
     branco: "rgba(255, 255, 255, 1)",
     cinza: "rgba(68, 68, 68, 1)",
-    gradient: "linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%)"
+    gradiente: "linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%)"
   },
   fontFamily: {
     principal: "Raleway",

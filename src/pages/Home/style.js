@@ -21,7 +21,7 @@ export const SobreSection = styled.section`
     justify-content: space-between;
     margin-top: 2rem;
     gap: 1.5rem;
-    color: ${variaveis.summer.cinza};
+    color: ${({theme}) => theme.fontColor};
 
     .titulo {
       font-weight: 700;

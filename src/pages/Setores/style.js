@@ -9,7 +9,7 @@ import rampas from './legenda/rampas.png';
 
 export const SetoresSection = styled.section`
 .mapa{
-  color: ${variaveis.summer.azulEscuroSombra};
+  color: ${({theme}) => theme.fontColor};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +59,7 @@ export const SetoresSection = styled.section`
 }
 .detalhes{
   padding: 2rem 1.5rem;
-  color: ${variaveis.summer.azulEscuroSombra};
+  color: ${({theme}) => theme.fontColor};
   h5{
     text-align: center;
     font-weight: 700;

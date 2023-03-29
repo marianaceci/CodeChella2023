@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const LineupSection = styled.section`
-  color: ${variaveis.summer.cinza};
+  color: ${({theme}) => theme.fontColor};
   .header {
     font-size: 3rem;
     line-height: 62px;
-    font-family: "Calistoga", cursive;
+    font-family: ${variaveis.fontFamily.secundaria};
     font-weight: 400;
     text-align: center;
     margin: 2rem auto;
@@ -22,7 +22,7 @@ export const LineupSection = styled.section`
       }
       h3 {
         line-height: 42px;
-        background-color: ${variaveis.summer.mostarda};
+        background-color: ${({theme}) => theme.fundoData};
         color: ${variaveis.summer.branco};
         font-family: "Calistoga", cursive;
         font-size: 2rem;
@@ -44,7 +44,7 @@ export const LineupSection = styled.section`
         padding-top: 3rem;
         hr {
           display: inline-block;
-          border-color: ${variaveis.summer.mostarda};
+          border-color: ${({theme}) => theme.fundoData};
           width: 15%;
           margin: 0 auto;
         }
