@@ -1,4 +1,4 @@
-export const bannerInfo = [  
+const bannerInfo = [  
   {
     pagina: "",
     titulo: "Boas-vindas ao #CodeChella2023!",
@@ -31,5 +31,5 @@ export const bannerInfo = [
   }
 ];
 
-
+export const getBanners = () => bannerInfo;
 
