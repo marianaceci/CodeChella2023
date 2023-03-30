@@ -1,5 +1,5 @@
 import { BannerSection } from "./style";
-import { bannerInfo } from "@/assets/bannerInfo";
+import { bannerInfo } from "@/data/bannerInfo";
 import { useTheme } from "styled-components";
 
 export default function Banner({blendmode}) {
