@@ -4,11 +4,15 @@ import styled from "styled-components";
 export const Experience = styled.section`
   display: flex;
   flex-direction: column;
+  color: ${({theme}) => theme.fontColor};
   .card{
     text-align: center;
-    picture img{
-      flex: none;
-      padding: 2rem 1.5rem;
+    img{
+      width: calc(100% - 3rem);
+      margin: 2rem 1.5rem;
+      border-radius: 16px;
+      object-fit: cover;
+      height: 381px;
     }
   }    
   
@@ -27,7 +31,19 @@ export const Experience = styled.section`
     }
   }
 
-  @media screen and (min-width: ${variaveis.breakpoints.tablet}){
+  @media screen and (min-width: ${variaveis.breakpoints.tablet}){    
+    .card{
+      &:nth-child(1){
+        img{
+          object-position: center -100px;
+        }
+      }
+      img{
+        width: calc(100% - 10rem);
+        height: 381px;
+        margin: 2rem 5rem;
+      }
+    }
     .texto{
       p{
         padding: 0 7.5rem;
@@ -37,16 +53,30 @@ export const Experience = styled.section`
 
   @media screen and (min-width: ${variaveis.breakpoints.desktop}){
     .card{
-      display: flex;
-      flex-direction: row;
+      display: grid;
+      grid: 1fr / 52% 48%;
       padding: 4rem 7.5rem 0 7.5rem;
       align-items: center;
       gap: 3rem; 
+      
+      img{
+        width: 609px;
+        margin: 0;
+      }
+      &:nth-child(1){
+        img{
+          object-position: inherit;
+        }
+      }     
 
       &:nth-child(2){
-        display: flex;
+        grid: 1fr / 48% 52%;
         flex-direction: row-reverse;
-        h6, p{
+        img{
+          grid-column: 2;
+          grid-row: 1;
+        }
+        .texto{
           text-align: right;
         }
       }

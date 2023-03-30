@@ -17,9 +17,12 @@ export const BannerSection = styled.div`
     line-height: 42px;
     
   }
-  img{
+  .bannerImage{
     height: 270px; 
     width: 100%;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   @media screen and (min-width: ${variaveis.breakpoints.tablet}) {
@@ -27,13 +30,13 @@ export const BannerSection = styled.div`
       font-size: 4rem;
       line-height: 83px;
     }
-    img{
+    .bannerImage{
       height: 384px;
     }
   }
 
   @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
-    img{
+    .bannerImage{
       height: 407px;
     }
   }

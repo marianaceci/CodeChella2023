@@ -1,35 +1,16 @@
-import BuyTicketButton from "../../components/BuyTicketButton";
+import BuyTicketButton from "@/components/BuyTicketButton";
 import LineUp from "./LineUp";
 import Banner from "@/components/Banner";
-import bannerDesktop from "/Home/home-banner_g.png";
-import bannerTablet from "/Home/home-banner_m.png";
-import bannerMobile from "/Home/home-banner_s.png";
-import sobreMobile from "/Home/sobre_s.png";
-import sobreTD from "/Home/sobre_m_g.png";
-import rodapeMobile from "/Home/bottom_s.png";
-import rodapeTablet from "/Home/bottom_m.png";
-import rodapeDesktop from "/Home/bottom_g.png";
-import { ImgRodape, SobreSection } from "./style";
+import { ImagemRodape, SobreSection } from "./style";
 
 export default function Home() {
   return (
     <>
-      <Banner
-        srcMobile={bannerMobile}
-        alt="foto do brinquedo chapéu mexicano"
-        srcTablet={bannerTablet}
-        srcDesktop={bannerDesktop}
-        titulo="Boas-vindas ao #CodeChella2023!"
-      />
+      <Banner blendmode='normal' />
 
       <SobreSection>
-        <picture className="picture">
-          <source srcSet={sobreTD} media="(min-width: 768px)" />
-          <img
-            src={sobreMobile}
-            alt="pessoas sorrindo assistindo ao festival"
-          />
-        </picture>
+        <div className="imagem-sobre"></div>
+
         <div className="descricao">
           <h3 className="titulo">
             &lt; 11 e 12 de Março &gt;
@@ -44,14 +25,9 @@ export default function Home() {
           <BuyTicketButton texto="Comprar Ingresso" />
         </div>
       </SobreSection>
-
       <LineUp />
 
-      <ImgRodape>
-        <source srcSet={rodapeDesktop} media="(min-width: 1440px)" />
-        <source srcSet={rodapeTablet} media="(min-width: 768px)" />
-        <img src={rodapeMobile} alt="pessoas dançando em festival" />
-      </ImgRodape>
+      <ImagemRodape></ImagemRodape>
     </>
   );
 }

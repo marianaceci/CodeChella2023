@@ -1,27 +1,22 @@
-import { BannerSection } from './style';
-import { variaveis } from "@/styles/variaveis";
+import { BannerSection } from "./style";
+import { bannerInfo } from "@/assets/bannerInfo";
+import { useTheme } from "styled-components";
 
-export default function Banner({titulo, srcTablet, srcDesktop, srcMobile, alt}) {
+export default function Banner({blendmode}) {
+  const theme = useTheme();
+  const bannerTheme = theme.images.banner;
+
+  const originalPath = window.location.href;
+  const path = originalPath.slice(22);
+  const isMain = path === '';
+
+  const bannerSelected = bannerInfo.filter((item) => item.pagina === path);
+  const imageBanner = isMain ? bannerTheme : bannerSelected[0].bannersrc;
+
   return (
     <BannerSection>
-      <h1>{titulo}</h1>
-      <picture>
-        <source
-          media={`(min-width: ${variaveis.breakpoints.desktop})`}
-          srcSet={`${srcDesktop} 1440w`}
-          sizes={`${variaveis.breakpoints.desktop}`}        
-        />
-        <source
-          media={`(min-width: ${variaveis.breakpoints.tablet})`}
-          srcSet={`${srcTablet} 768w`}
-          sizes={`${variaveis.breakpoints.tablet}`}        
-        />
-        <img
-          src={srcMobile}
-          alt={alt}      
-        />
-      </picture>
-        
+      <h1>{bannerSelected[0].titulo}</h1>
+      <div className="bannerImage" style={{backgroundImage: `url(${imageBanner})`, mixBlendMode: `${blendmode}`}}></div>
     </BannerSection>
-  )
-}
+  );
+} 

@@ -1,5 +1,5 @@
-import {variaveis} from "./variaveis";
-import { BsInstagram, BsTwitch, BsTwitter, BsWhatsapp } from "react-icons/bs";
+import { variaveis } from "./variaveis";
+import styled from "styled-components";
 
 export const borealTheme = () => ({
   header: variaveis.boreal.azulEscuro,
@@ -9,19 +9,15 @@ export const borealTheme = () => ({
   fundoData: variaveis.boreal.verdeEscuro,
   gradientePagina: variaveis.boreal.gradiente,
   footer: variaveis.boreal.azulEscuro,
-  images: {
-    banner: '/Home/borealHomeBanner-s.png',
-    sobre: '/Home/borealHomeSobre-s.png',
-    bottom: '/Home/borealHomeBottom-s.png',
-  },
   logo: 'logo-white.svg',
-  logoFav: '/fav-white.svg'
-  // icons: {
-  //   whatsapp: <BsWhatsapp color={variaveis.boreal.branco}/>,
-  //   twitch: <BsTwitch color={variaveis.boreal.branco}/>,
-  //   instagram: <BsInstagram color={variaveis.boreal.branco}/>,
-  //   twitter: <BsTwitter color={variaveis.boreal.branco}/>,
-  // }
+  logoFav: '/fav-white.svg',
+  images: {
+    banner: '/banners/boreal-home-banner.png',
+    sobre: '/Home/boreal-home-sobre.png',
+    bottom: '/Home/boreal-home-bottom.png'
+  },
+  logo: '/logo-white.svg',
+  fav: '/fav-white.svg'
 });
 
 export const summerTheme = () => ({
@@ -32,17 +28,28 @@ export const summerTheme = () => ({
   fundoData: variaveis.summer.mostarda,
   gradientePagina: variaveis.summer.gradiente,
   footer: variaveis.summer.amarelo,
-  images: {
-    banner: '/Home/home-banner_s.png',
-    sobre: '/Home/sobre_s.png',
-    bottom: '/Home/bottom_s.png',
-  },
   logo: 'logo-grey.svg',
-  logoFav: '/fav-white.svg'
-  // icons: {
-  //   whatsapp: <BsWhatsapp color={variaveis.summer.cinza}/>,
-  //   twitch: <BsTwitch color={variaveis.summer.cinza}/>,
-  //   instagram: <BsInstagram color={variaveis.summer.cinza}/>,
-  //   twitter:<BsTwitter color={variaveis.summer.cinza}/>, 
-  // }
-})
+  logoFav: '/fav-white.svg',
+  images: {
+    banner: '/banners/summer-home-banner.png',
+    sobre: '/Home/summer-home-sobre.png',
+    bottom: '/Home/summer-home-bottom.png'
+  },
+  logo: '/logo-grey.svg',
+  fav: '/fav-grey.svg'
+});
+
+export const BotaoTema = styled.button`
+  position:absolute;
+  top: 1vh;
+  left: 10px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  color: ${variaveis.summer.branco};
+  svg{
+    height: 25px;
+    width: 25px;
+  }
+`

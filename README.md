@@ -18,7 +18,6 @@ Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, pró
 
 
 *************************************************
-- add trocar variaveis
 - fazer pagina Not Found
 *************************************************
 

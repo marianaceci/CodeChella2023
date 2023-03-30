@@ -66,7 +66,7 @@ export const FormSection = styled.form`
     }
   }
   .mensagemErro {
-    color: red;
+    color: rgb(142, 0, 0);
   }
 
   a {
@@ -86,7 +86,7 @@ export const FormSection = styled.form`
   }
 
   @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
-    padding: 3rem 20rem;
+    padding: 3rem 20rem 0 20rem;
 
     .divisaoCampos {
       flex-direction: row;

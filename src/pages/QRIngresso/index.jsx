@@ -1,12 +1,8 @@
 import Banner from "../../components/Banner";
-import bannerMobile from "/QRCodeIngresso/qr-banner_s.png";
-import bannerTablet from "/QRCodeIngresso/qr-banner_m.png";
-import bannerDesktop from "/QRCodeIngresso/qr-banner_g.png";
 import { useState } from "react";
 import code from "./qr-code.png";
-import logo from "./logo-black.png";
-import fav from "./fav-white.svg";
 import { QRCodeSection } from "./style";
+import { useTheme } from "styled-components";
 
 export default function QRIngresso() {
   const [nome, setNome] = useState(() => {
@@ -29,15 +25,13 @@ export default function QRIngresso() {
     return dataSalvo;
   });
 
+  const theme = useTheme();
+  const logo = theme.logo;
+  const fav = theme.fav;
+
   return (
     <>
-      <Banner
-        srcMobile={bannerMobile}
-        alt="duas meninas conversando e rindo"
-        srcTablet={bannerTablet}
-        srcDesktop={bannerDesktop}
-        titulo="Seu ingresso está aqui!"
-      />
+      <Banner blendmode='multiply' />
       <QRCodeSection>
           <h6 className="titulo">
             Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!
@@ -45,7 +39,7 @@ export default function QRIngresso() {
           <div className="card">
             <div className="logos">
               <img src={logo} alt="logo da code chella" />
-              <img src={fav} alt="favicon da code chella" />
+              <img src={fav} className="fav" alt="favicon da code chella" />
             </div>
 
             <div className="info">

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { variaveis } from '../../styles/variaveis';
+import { rotas } from '../../assets/rotas';
 
 const Ul = styled.ul`
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
@@ -66,25 +67,6 @@ const Ul = styled.ul`
 `
 
 const RightNav = ({open}) => {
-  const rotas = [
-    {
-      label: "A experiência",
-      to: "/experiencia",
-    },
-    {
-      label: "Mapa de Setores",
-      to: "/setores",
-    },
-    {
-      label: "Informações",
-      to: "/informacoes",
-    },
-    {
-      label: "Ingresso",
-      to: "/ingresso",
-    },
-  ];
-
   return (
     <Ul open={open}>
       {rotas.map((rota, index) => (

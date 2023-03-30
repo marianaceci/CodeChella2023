@@ -13,9 +13,11 @@ export const variaveis = {
     coral: "#FBF0DD",
     preto: "#000000",
     branco: "rgba(255, 255, 255, 1)",
+    erro: "#FF0000",
     cinza: "rgba(68, 68, 68, 1)",
     hover: "rgba(81, 158, 197, 1)",
     gradiente: "linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%)"
+    
   },
   boreal: {
     verdeCinza: "#304968",
@@ -26,6 +28,7 @@ export const variaveis = {
     azulEscuroMenu: "#2E7BA2",
     hover: "#606ADA",
     preto: "#000000",
+    erro: "#FF0000",
     branco: "rgba(255, 255, 255, 1)",
     cinza: "rgba(68, 68, 68, 1)",
     gradiente: "linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%)"

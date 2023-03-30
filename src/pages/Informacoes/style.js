@@ -36,6 +36,7 @@ color: ${({theme}) => theme.fontColor};
     font-size: 1.25rem;
     line-height: 40px;
     background: ${variaveis.summer.azulClaro};
+    color: ${variaveis.summer.preto};
     padding: 1rem;
   }
 }

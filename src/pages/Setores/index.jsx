@@ -1,18 +1,11 @@
-import Banner from "../../components/Banner";
+import Banner from "@/components/Banner";
 import detalhes from "./detalhes.json";
-import bannerAll from "/Setores/setores-banner_s_m_g.png";
 import { SetoresSection } from "./style";
 
 export default function Setores() {
   return (
     <>
-      <Banner
-        srcMobile={bannerAll}
-        alt="céu azul"
-        srcTablet={bannerAll}
-        srcDesktop={bannerAll}
-        titulo="Mapa de Setores"
-      />
+      <Banner blendmode='multiply' />
 
       <SetoresSection>
         <div className="mapa">

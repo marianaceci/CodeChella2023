@@ -16,13 +16,18 @@ export const QRCodeSection = styled.section`
 
   .card {
     padding: 2rem;
-    background: ${({theme}) => theme.gradiente};
+    background: ${({theme}) => theme.gradientePagina};
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+    
     .logos {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 2rem;
+      .fav {
+        width: 42px;
+        height: 42px;
+      }
     }
 
     .info {
