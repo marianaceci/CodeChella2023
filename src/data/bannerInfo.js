@@ -1,10 +1,5 @@
 export const bannerInfo = [  
   {
-    pagina: "",
-    titulo: "Boas-vindas ao #CodeChella2023!",
-    src: '/banners/boreal-home-banner.png'
-  },
-  {
     pagina: "experiencia",
     titulo: "A Experiência",
     src: '/banners/experiencia-banner.png'
