@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoArrowForward } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import {dataEvento, setorLista, tiposDeIngresso} from '../../../assets/data/dataForm.js'
+import {dataEvento, setorLista, tiposDeIngresso} from '@/assets/data/dataForm.js'
 import { FormSection } from "./style";
 
 const emailRegex =

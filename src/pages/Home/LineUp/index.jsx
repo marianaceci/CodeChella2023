@@ -1,5 +1,5 @@
 import { Banda, LineupSection } from "./style";
-import { getSabado, getDomingo } from "../../../assets/data/lineupList.js";
+import { getSabado, getDomingo } from "@/assets/data/lineupList.js";
 
 export default function LineUp() {
   const sabado = getSabado();

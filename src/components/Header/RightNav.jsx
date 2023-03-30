@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
-import { variaveis } from '../../styles/variaveis';
-import { rotas } from '../../assets/rotas';
+import { variaveis } from '@/styles/variaveis';
+import { rotas } from '@/assets/rotas';
 
 const Ul = styled.ul`
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
