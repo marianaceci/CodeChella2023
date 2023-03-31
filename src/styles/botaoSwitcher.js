@@ -17,6 +17,6 @@ export const BotaoTema = styled.button`
 
   @media screen and (min-width: ${variaveis.breakpoints.desktop}){
     left: 50px;
-    top: 2vh;
+    top: 3vh;
   }
 `
