@@ -1,11 +1,16 @@
 import Banner from "@/components/Banner";
 import { Experience } from "./style";
 import experiencias from "./experiencias.json";
+import bannerImage from '/banners/experiencia-banner.png';
 
 export default function Experiencia() {
   return (
     <>
-      <Banner blendmode='multiply' />
+      <Banner
+        blendmode='multiply'
+        titulo='A Experiência'
+        bannerImage={bannerImage}
+      />
       <Experience>
         {experiencias.map((experiencia, index) => (
           <div className="card" key={index}>

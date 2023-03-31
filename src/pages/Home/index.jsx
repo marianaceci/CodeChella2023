@@ -2,11 +2,19 @@ import BuyTicketButton from "@/components/BuyTicketButton";
 import LineUp from "./LineUp";
 import Banner from "@/components/Banner";
 import { ImagemRodape, SobreSection } from "./style";
+import { useTheme } from "styled-components";
 
 export default function Home() {
+  const theme = useTheme();
+  const bannerTheme = theme.images.banner;
+
   return (
     <>
-      <Banner blendmode='normal' />
+      <Banner
+        blendmode='normal'
+        titulo='Boas-vindas ao #CodeChella2023!'
+        bannerImage={bannerTheme}
+      />
 
       <SobreSection>
         <div className="imagem-sobre"></div>

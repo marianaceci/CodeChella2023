@@ -3,6 +3,7 @@ import { useState } from "react";
 import code from "./qr-code.png";
 import { QRCodeSection } from "./style";
 import { useTheme } from "styled-components";
+import bannerImage from '/banners/qringresso-banner.png';
 
 export default function QRIngresso() {
   const [nome, setNome] = useState(() => {
@@ -31,7 +32,11 @@ export default function QRIngresso() {
 
   return (
     <>
-      <Banner blendmode='multiply' />
+      <Banner
+        blendmode='multiply'
+        titulo='Seu ingresso está aqui!'
+        bannerImage={bannerImage}
+      />
       <QRCodeSection>
           <h6 className="titulo">
             Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!
