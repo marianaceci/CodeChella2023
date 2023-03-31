@@ -10,7 +10,7 @@ Rápida descrição do objetivo de fazer esse projeto
 | :fire: Desafio     | https://cursos.alura.com.br/codechella-semana-1-monicahillman-1673444925008-p514254
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](./screenshot.jpg#vitrinedev)
+![](./screenshot.png#vitrinedev)
 
 ## Detalhes do projeto
 
