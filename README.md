@@ -14,5 +14,7 @@ Esse projeto tem o objetivo de apresentar informações sobre o evento fictício
 
 ## Detalhes do projeto
 
-O projeto foi desenvolvido com React+Vite, react-router-dom e styled-components.
+Neste projeto optei por utilizar as tecnologias React+Vite, react-router-dom e styled-components. 
+Ele possui um design responsivo (conceito Mobile First), ou seja, o layout se adapta a diferentes tamanhos de tela.
+Há também a opção de mudar o tema do site entre summer(claro) e boreal(escuro), como mostra a foto acima.
 A geração do ingresso com informações do usuário acontece por meio do preenchimento de um formulário com campos validados por código em Javascript. Essas informações são salvas em localStorage para que sejam gravadas no ingresso. Meu próximo passo com este projeto é salvar as informações dos usuários em um banco de dados, assim como passá-lo para Typescript.
