@@ -9,10 +9,10 @@ export default function Banner({blendmode}) {
   const originalPath = window.location.href;
   const path = originalPath.slice(22);
   //const isMain = path === '';
+  const bannerSelected = bannerInfo.filter((item) => item.pagina === path);
   const isTitulo = bannerSelected[0]?.titulo === undefined;
   const isImageBanner = bannerSelected[0]?.src === undefined;
 
-  const bannerSelected = bannerInfo.filter((item) => item.pagina === path);
   const tituloMain = isTitulo ? "Boas-vindas ao #CodeChella2023!" : bannerSelected[0]?.titulo;
   const imageBanner = isImageBanner ? bannerTheme : bannerSelected[0]?.src;
   
