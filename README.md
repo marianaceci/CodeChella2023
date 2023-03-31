@@ -1,32 +1,18 @@
-# Nome do meu projeto
+# Front-end Challenge 6 Alura - CodeChella2023
 
-Rápida descrição do objetivo de fazer esse projeto
+Esse projeto tem o objetivo de apresentar informações sobre o evento fictício de música CodeChella por meios de 5 páginas: Home, Experiência, Setores, Informações e compra de ingresso.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **CodeChella2023**
 | :label: Tecnologias | javascript, html, react+vite, react-router-dom, styled-components
 | :rocket: URL         | https://code-chella2023-nstu9l2j9-marianaceci.vercel.app/
-| :fire: Desafio     | https://cursos.alura.com.br/codechella-semana-1-monicahillman-1673444925008-p514254
+| :fire: Desafio     | https://www.alura.com.br/challenges/front-end-6
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![](./screenshot.png#vitrinedev)
 
 ## Detalhes do projeto
 
-Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
-
-
-
-
-FAZER COM TYPESCRIPT
-FAZER COM DATABASE
-
-
-relative path:
-https://theroadtoenterprise.com/blog/how-to-set-up-path-resolving-in-vite
-
-
-https://github.com/szhsin/react-accordion
-An unstyled, accessible accordion library for React apps and design systems
-npm install @szhsin/react-accordion
+O projeto foi desenvolvido com React+Vite, react-router-dom e styled-components.
+A geração do ingresso com informações do usuário acontece por meio do preenchimento de um formulário com campos validados por código em Javascript. Essas informações são salvas em localStorage para que sejam gravadas no ingresso. Meu próximo passo com este projeto é salvar as informações dos usuários em um banco de dados, assim como passá-lo para Typescript.
