@@ -1,5 +1,5 @@
 import { BannerSection } from "./style";
-import { bannerInfo } from "@/data/bannerInfo";
+import { bannerInfo } from "./bannerInfo";
 import { useTheme } from "styled-components";
 
 export default function Banner({blendmode}) {
@@ -8,7 +8,7 @@ export default function Banner({blendmode}) {
 
   const originalPath = window.location.href;
   const path = originalPath.slice(22);
-  //const isMain = path === '';
+  
   const bannerSelected = bannerInfo.filter((item) => item.pagina === path);
   const isTitulo = bannerSelected[0]?.titulo === undefined;
   const isImageBanner = bannerSelected[0]?.src === undefined;
