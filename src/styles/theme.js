@@ -38,18 +38,3 @@ export const summerTheme = () => ({
   logo: '/logo-grey.svg',
   fav: '/fav-grey.svg'
 });
-
-export const BotaoTema = styled.button`
-  position:absolute;
-  top: 1vh;
-  left: 10px;
-  background-color: inherit;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  color: ${variaveis.summer.branco};
-  svg{
-    height: 25px;
-    width: 25px;
-  }
-`

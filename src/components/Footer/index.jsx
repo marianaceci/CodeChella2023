@@ -1,5 +1,5 @@
 import { BsWhatsapp, BsTwitch, BsInstagram, BsTwitter } from "react-icons/bs";
-import { FooterSection } from './style';
+import { FooterContainer, FooterSection } from "./style";
 import { useTheme } from "styled-components";
 
 export default function Footer() {
@@ -7,24 +7,26 @@ export default function Footer() {
   const logo = theme.logo;
 
   return (
-    <FooterSection>      
-      <div className="redes">
-        <img src={logo} alt='logo do CodeChella' />
-        <div className="icons">
-          <span>Acesse nossas redes: </span>
-          <ul>
-            <BsWhatsapp />
-            <BsTwitch />
-            <BsInstagram />
-            <BsTwitter />
-          </ul>    
+    <FooterContainer>
+      <FooterSection>
+        <div className="redes">
+          <img src={logo} alt="logo do CodeChella" />
+          <div className="icons">
+            <span>Acesse nossas redes: </span>
+            <ul>
+              <BsWhatsapp />
+              <BsTwitch />
+              <BsInstagram />
+              <BsTwitter />
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div className="autor">
-        <p>Desenvolvido por Alura.</p>
-        <p>Projeto fictício sem fins comerciais.</p> 
-      </div>
-    </FooterSection>
-  )
+        <div className="autor">
+          <p>Desenvolvido por Alura.</p>
+          <p>Projeto fictício sem fins comerciais.</p>
+        </div>
+      </FooterSection>
+    </FooterContainer>
+  );
 }

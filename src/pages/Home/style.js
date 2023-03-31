@@ -56,6 +56,8 @@ export const SobreSection = styled.section`
     grid: 1fr / 1fr 1fr;
     gap: 3rem;
     padding: 4rem 7.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
     .imagem-sobre {
       width: 609px;
       height: 381px;

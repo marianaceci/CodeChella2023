@@ -57,6 +57,8 @@ color: ${({theme}) => theme.fontColor};
   @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
     .cards{
       padding: 0 13rem 3rem 13rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
   }
 `;

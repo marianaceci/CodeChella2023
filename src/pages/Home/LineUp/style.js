@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const LineupSection = styled.section`
-  color: ${({theme}) => theme.fontColor};
+  color: ${({ theme }) => theme.fontColor};
   .header {
     font-size: 3rem;
     line-height: 62px;
@@ -22,7 +22,7 @@ export const LineupSection = styled.section`
       }
       h3 {
         line-height: 42px;
-        background-color: ${({theme}) => theme.fundoData};
+        background-color: ${({ theme }) => theme.fundoData};
         color: ${variaveis.summer.branco};
         font-family: "Calistoga", cursive;
         font-size: 2rem;
@@ -44,9 +44,12 @@ export const LineupSection = styled.section`
         padding-top: 3rem;
         hr {
           display: inline-block;
-          border-color: ${({theme}) => theme.fundoData};
+          border: 2px solid ${({ theme }) => theme.fundoData};
           width: 15%;
           margin: 0 auto;
+          border-top: none;
+          border-right: none;
+          border-left: none;
         }
         h3 {
           font-size: 3rem;
@@ -60,8 +63,12 @@ export const LineupSection = styled.section`
   @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
     display: flex;
     flex-direction: column;
-    hr {
-      width: 25%;
+    .programa {
+      .data {
+        hr {
+          width: 25%;
+        }
+      }
     }
   }
 `;

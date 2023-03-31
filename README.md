@@ -10,16 +10,13 @@ Rápida descrição do objetivo de fazer esse projeto
 | :fire: Desafio     | https://cursos.alura.com.br/codechella-semana-1-monicahillman-1673444925008-p514254
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](./screenshot.jpg)
+![](./screenshot.jpg#vitrinedev)
 
 ## Detalhes do projeto
 
 Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
 
 
-*************************************************
-- fazer pagina Not Found
-*************************************************
 
 
 FAZER COM TYPESCRIPT

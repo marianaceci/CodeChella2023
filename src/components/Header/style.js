@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
 export const HeaderNav = styled.nav`
-  background-color: ${({theme}) => theme.header};
   display: flex;
   padding: 2rem 1.5rem;
   align-items: center;
   justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @media screen and (min-width: ${variaveis.breakpoints.tablet}) {
     flex-direction: column;
@@ -24,6 +25,10 @@ export const HeaderNav = styled.nav`
     }
   }
 `;
+
+export const HeaderContainer = styled.div`
+  background-color: ${({theme}) => theme.header};
+`
 
 
 

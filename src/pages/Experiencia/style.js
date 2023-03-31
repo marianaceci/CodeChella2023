@@ -58,10 +58,13 @@ export const Experience = styled.section`
       padding: 4rem 7.5rem 0 7.5rem;
       align-items: center;
       gap: 3rem; 
+      max-width: 1600px;
+      margin: 0 auto;
       
       img{
         width: 609px;
         margin: 0;
+        justify-self: flex-end;
       }
       &:nth-child(1){
         img{
@@ -75,6 +78,7 @@ export const Experience = styled.section`
         img{
           grid-column: 2;
           grid-row: 1;
+          justify-self: flex-start;
         }
         .texto{
           text-align: right;

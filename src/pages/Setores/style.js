@@ -145,6 +145,8 @@ export const SetoresSection = styled.section`
         font-size: 3rem;
       }
       .cards{
+        max-width: 1800px;
+        margin: 0 auto;
         display: flex;  
         flex-direction: row; 
         align-items: flex-start;

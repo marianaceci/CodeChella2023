@@ -53,11 +53,23 @@ export const QRCodeSection = styled.section`
   }
 
   @media screen and (min-width: ${variaveis.breakpoints.desktop}) {
-    padding: 2rem 20rem;
+    padding: 2rem 0;
+    max-width: 40vw;
+    margin: 0 auto;
+    .titulo{
+      max-width: 700px;
+      margin-right: auto;
+      margin-left: auto;
+    }
     .card {
+      max-width: 1000px;
+      margin: 0 auto;
       .info {
-        gap: 3rem;
+        gap: 2rem;
         flex-direction: row;
+        max-width: 600px;
+        margin: 0 auto;
+        justify-content: center;
         .text {
           display: flex;
           flex-direction: column;

@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { variaveis } from "@/styles/variaveis";
 
-export const FooterSection = styled.footer`
-  background-color: ${({ theme }) => theme.footer};
-  color: ${({theme}) => theme.fontColor};
+export const FooterSection = styled.footer`  
+  color: ${({ theme }) => theme.fontColor};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +11,8 @@ export const FooterSection = styled.footer`
   font-size: 1.25rem;
   flex-direction: column; 
   padding: 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .redes {   
 
@@ -20,7 +21,7 @@ export const FooterSection = styled.footer`
       align-items: center;
       flex-direction: column;  
       svg{
-        color: ${({theme}) => theme.fontColor};
+        color: ${({ theme }) => theme.fontColor};
       }
       ul{
         display: flex;
@@ -101,5 +102,6 @@ export const FooterSection = styled.footer`
   }
 `;
 
-
-
+export const FooterContainer = styled.div`
+  background-color: ${({ theme }) => theme.footer};
+`;
