@@ -15,7 +15,7 @@ export const BotaoIngresso = styled.div`
     font-size: 1.25rem;
     line-height: 40px;
     &:hover{
-      background-color: ${({theme}) => theme.hover};
+      background-color: ${({theme}) => theme.hoverBotao};
       cursor: pointer;
     }
     svg{
